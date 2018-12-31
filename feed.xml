@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2018-12-29T11:48:33-05:00</updated>
+  <updated>2018-12-31T16:45:37-05:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -31,12 +31,12 @@
       <title type="html">How does DNS work?</title>
       
       
-      <link href="https://software.themikejr.com/2018/12/27/how-does-dns-work/" rel="alternate" type="text/html" title="How does DNS work?" />
+      <link href="https://software.themikejr.com/how-does-dns-work/" rel="alternate" type="text/html" title="How does DNS work?" />
       
       <published>2018-12-27T00:00:00-05:00</published>
       <updated>2018-12-27T00:00:00-05:00</updated>
-      <id>https://software.themikejr.com/2018/12/27/how-does-dns-work</id>
-      <content type="html" xml:base="https://software.themikejr.com/2018/12/27/how-does-dns-work/">&lt;p&gt;Whether you realize it or not, DNS is a workhorse of the internet ecosystem. It provides the glue that allows someone like your grandma, (who knows that you want a pair of Adidas Ultraboost from footlocker.com for Christmas) to talk TCP with a server on the other side of the world.&lt;/p&gt;
+      <id>https://software.themikejr.com/how-does-dns-work</id>
+      <content type="html" xml:base="https://software.themikejr.com/how-does-dns-work/">&lt;p&gt;Whether you realize it or not, DNS is a workhorse of the internet ecosystem. It provides the glue that allows someone like your grandma, (who knows that you want a pair of Adidas Ultraboost from footlocker.com for Christmas) to talk TCP with a server on the other side of the world.&lt;/p&gt;
 
 &lt;p&gt;It’s amazing when you think about it…&lt;/p&gt;
 
@@ -129,60 +129,15 @@
   
     <entry>
       
-      <title type="html">Weekly Reading List</title>
-      
-      
-      <link href="https://software.themikejr.com/2018/12/14/reading-list/" rel="alternate" type="text/html" title="Weekly Reading List" />
-      
-      <published>2018-12-14T00:00:00-05:00</published>
-      <updated>2018-12-14T00:00:00-05:00</updated>
-      <id>https://software.themikejr.com/2018/12/14/reading-list</id>
-      <content type="html" xml:base="https://software.themikejr.com/2018/12/14/reading-list/">&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://robertheaton.com/2014/07/21/how-to-win-friends-and-influence-repos/&quot;&gt;How to win friends and influence repos&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://michaelfeathers.silvrback.com/testing-yourself&quot;&gt;Testing Yourself&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      
-        <author>
-            <name>Mike Brinker</name>
-          
-          
-        </author>
-      
-
-      
-        <category term="What I've Been Reading" />
-      
-
-      
-
-      
-        <summary type="html">How to win friends and influence repos Testing Yourself</summary>
-      
-
-      
-      
-    </entry>
-  
-  
-  
-    <entry>
-      
       <title type="html">The Bad Plus</title>
       
       
-      <link href="https://software.themikejr.com/2018/12/08/bad-plus/" rel="alternate" type="text/html" title="The Bad Plus" />
+      <link href="https://software.themikejr.com/bad-plus/" rel="alternate" type="text/html" title="The Bad Plus" />
       
       <published>2018-12-08T00:00:00-05:00</published>
       <updated>2018-12-08T00:00:00-05:00</updated>
-      <id>https://software.themikejr.com/2018/12/08/bad-plus</id>
-      <content type="html" xml:base="https://software.themikejr.com/2018/12/08/bad-plus/">&lt;p&gt;I’ve found over the years that there is some music that is well-suited for listening while doing software-development related work and some music is not. Rather than try to derive a special formula for “coding music” I’m going to tell you about some music that works for me. One group I’ve been listening to for awhile that works particularly well is &lt;em&gt;The Bad Plus&lt;/em&gt;.&lt;/p&gt;
+      <id>https://software.themikejr.com/bad-plus</id>
+      <content type="html" xml:base="https://software.themikejr.com/bad-plus/">&lt;p&gt;I’ve found over the years that there is some music that is well-suited for listening while doing software-development related work and some music is not. Rather than try to derive a special formula for “coding music” I’m going to tell you about some music that works for me. One group I’ve been listening to for awhile that works particularly well is &lt;em&gt;The Bad Plus&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;The Bad Plus&lt;/em&gt; is a jazz piano trio that might not sound like a jazz group to you at first blush. They employ jazz idioms and instrumentation on popular cover tunes and their own originals as well. I find a wide range of mood and tone in their music: calm and nearly ambient, cacophonic excitement, and even straight ahead tunes with lots of energy. Despite the diversity it all works nicely when I’m clacking away on the keyboard.&lt;/p&gt;
 
@@ -236,27 +191,42 @@
   
     <entry>
       
-      <title type="html">Weekly Reading List</title>
+      <title type="html">The Serverless Sea Change</title>
       
       
-      <link href="https://software.themikejr.com/2018/12/07/reading-list/" rel="alternate" type="text/html" title="Weekly Reading List" />
+      <link href="https://software.themikejr.com/the-serverless-sea-change/" rel="alternate" type="text/html" title="The Serverless Sea Change" />
       
       <published>2018-12-07T00:00:00-05:00</published>
       <updated>2018-12-07T00:00:00-05:00</updated>
-      <id>https://software.themikejr.com/2018/12/07/reading-list</id>
-      <content type="html" xml:base="https://software.themikejr.com/2018/12/07/reading-list/">&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cameronlonsdale.com/2018/11/26/whats-in-a-docker-image/&quot;&gt;What’s in a docker image?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://andresalmiray.com/the-gradle-pom/&quot;&gt;The gradle POM&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.infoq.com/articles/serverless-sea-change&quot;&gt;Serverless Sea Change&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Scientists find gut bacteria in the brain&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1712.07962&quot;&gt;Dark matter solved and explained&lt;/a&gt;&lt;/li&gt;
+      <id>https://software.themikejr.com/the-serverless-sea-change</id>
+      <content type="html" xml:base="https://software.themikejr.com/the-serverless-sea-change/">&lt;p&gt;I read a great article at InfoQ this week called &lt;a href=&quot;https://www.infoq.com/articles/serverless-sea-change&quot;&gt;&lt;em&gt;The Serverless Sea Change&lt;/em&gt;&lt;/a&gt;. Generally, the argument made is that code leads to technical debt, therefore the solution with the least amount of code wins. For example:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you are building a Serviceful Serverless application, you will need to spend significantly more time on research than you would with an application where you will write everything. This is because you will be implementing much more functionality of the application on services, and you need to verify that you are selecting the correct service. You also need to figure out the right way to integrate the service with your application. So instead of spending an hour or two looking for packages you might leverage, you should think about spending days and even weeks writing proof-of-concept code and testing different options.&lt;/p&gt;
+
+  &lt;p&gt;Another way to say this is in two equations:&lt;/p&gt;
+
+  &lt;p&gt;2 Weeks Research + 1 Day Development → N Lines of Code to Maintain&lt;/p&gt;
+
+  &lt;p&gt;1 Day Research + 2 Weeks Development → 10 ⋅ N Lines of Code to Maintain&lt;/p&gt;
+
+  &lt;p&gt;On average, ten times more lines of code is ten times more technical debt, which means increasingly slower and less predictable future development velocity, and systems that cannot be well maintained by the average developer.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’ve generally remained skeptical as to whether the advantages of serverless architectures outweigh the benefits, or to put it another way, if there are any advantages when all is sasaid and done. For me, the looming issues are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Vendor Lock-in&lt;/li&gt;
+  &lt;li&gt;Conversely, the portability of any artifact targeting a FaaS platform&lt;/li&gt;
+  &lt;li&gt;The amount of glue needed to make serverless work (any AWS Lambda demo I’ve seen spends more time gluing AWS services together than it does writing code)&lt;/li&gt;
+  &lt;li&gt;In the case of AWS, many of the glue services are still beta products&lt;/li&gt;
+  &lt;li&gt;Ease of local development&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;Cold Starts&lt;/em&gt; problem&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;best-read-of-the-week&quot;&gt;Best Read of the Week&lt;/h2&gt;
+&lt;p&gt;I remain skeptical, but this article does a great job of explaining and arguing for the benefits. Also, perhaps I am wrong (!) and we are a few years away from a true “Serverless Sea Change”.&lt;/p&gt;
 
-&lt;p&gt;The award goes to &lt;a href=&quot;https://www.infoq.com/articles/serverless-sea-change&quot;&gt;&lt;em&gt;Serverless Sea Change&lt;/em&gt;&lt;/a&gt;.
-I’ve generally remained skeptical as to whether the advantages of serverless architectures outweight the benefits.
-I remail skeptical, but this article does a great job of explaining and arguing for the benefits.&lt;/p&gt;</content>
+&lt;p&gt;Be sure to check out the whole article over at &lt;a href=&quot;https://www.infoq.com/articles/serverless-sea-change&quot;&gt;InfoQ&lt;/a&gt;.&lt;/p&gt;</content>
 
       
       
@@ -279,7 +249,7 @@ I remail skeptical, but this article does a great job of explaining and arguing 
       
 
       
-        <summary type="html">What’s in a docker image? The gradle POM Serverless Sea Change Scientists find gut bacteria in the brain Dark matter solved and explained</summary>
+        <summary type="html">I read a great article at InfoQ this week called The Serverless Sea Change. Generally, the argument made is that code leads to technical debt, therefore the solution with the least amount of code wins. For example:</summary>
       
 
       

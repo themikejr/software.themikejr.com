@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>The Serverless Sea Change</title>
+  <meta name="description" content="I read a great article at InfoQ this week called The Serverless Sea Change. Generally, the argument made is that code leads to technical debt, therefore the solution with the least amount of code wins. For example:">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://software.themikejr.com/the-serverless-sea-change/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Mike Brinker" href="https://software.themikejr.com/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="themikejr">
+  <meta name="twitter:title" content="The Serverless Sea Change">
+  <meta name="twitter:description" content="I read a great article at InfoQ this week called The Serverless Sea Change. Generally, the argument made is that code leads to technical debt, therefore the solution with the least amount of code w...">
+  
+    <meta name="twitter:creator" content="themikejr">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113905671-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113905671-2' );
+</script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <img style="float:left;padding-right:5px" src="/assets/logo.png" height="45" width=45>
+    <a class="site-title" href="/">Mike Brinker</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    
+      <h1 class="post-title" itemprop="name headline">The Serverless Sea Change</h1>
+    
+    <p class="post-meta post-subtitle">Serverless architecture might have a shot</p>
+    <p class="post-meta"><time datetime="2018-12-07T00:00:00-05:00" itemprop="datePublished">Dec 7, 2018</time> •
+  
+    
+    
+      
+        <a href="/categories/what-i-ve-been-reading/">What I&#39;ve Been Reading</a>
+      
+    
+      
+    
+      
+    
+  
+
+
+
+</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I read a great article at InfoQ this week called <a href="https://www.infoq.com/articles/serverless-sea-change"><em>The Serverless Sea Change</em></a>. Generally, the argument made is that code leads to technical debt, therefore the solution with the least amount of code wins. For example:</p>
+
+<blockquote>
+  <p>If you are building a Serviceful Serverless application, you will need to spend significantly more time on research than you would with an application where you will write everything. This is because you will be implementing much more functionality of the application on services, and you need to verify that you are selecting the correct service. You also need to figure out the right way to integrate the service with your application. So instead of spending an hour or two looking for packages you might leverage, you should think about spending days and even weeks writing proof-of-concept code and testing different options.</p>
+
+  <p>Another way to say this is in two equations:</p>
+
+  <p>2 Weeks Research + 1 Day Development → N Lines of Code to Maintain</p>
+
+  <p>1 Day Research + 2 Weeks Development → 10 ⋅ N Lines of Code to Maintain</p>
+
+  <p>On average, ten times more lines of code is ten times more technical debt, which means increasingly slower and less predictable future development velocity, and systems that cannot be well maintained by the average developer.</p>
+</blockquote>
+
+<p>I’ve generally remained skeptical as to whether the advantages of serverless architectures outweigh the benefits, or to put it another way, if there are any advantages when all is sasaid and done. For me, the looming issues are:</p>
+
+<ul>
+  <li>Vendor Lock-in</li>
+  <li>Conversely, the portability of any artifact targeting a FaaS platform</li>
+  <li>The amount of glue needed to make serverless work (any AWS Lambda demo I’ve seen spends more time gluing AWS services together than it does writing code)</li>
+  <li>In the case of AWS, many of the glue services are still beta products</li>
+  <li>Ease of local development</li>
+  <li>The <em>Cold Starts</em> problem</li>
+</ul>
+
+<p>I remain skeptical, but this article does a great job of explaining and arguing for the benefits. Also, perhaps I am wrong (!) and we are a few years away from a true “Serverless Sea Change”.</p>
+
+<p>Be sure to check out the whole article over at <a href="https://www.infoq.com/articles/serverless-sea-change">InfoQ</a>.</p>
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://software.themikejr.com/the-serverless-sea-change/';
+      this.page.identifier = 'https://software.themikejr.com/the-serverless-sea-change/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://themikejr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+&copy; Mike Brinker - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="https://software.themikejr.com/feed.xml">RSS</a>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
