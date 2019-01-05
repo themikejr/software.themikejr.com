@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2018-12-31T16:45:37-05:00</updated>
+  <updated>2019-01-05T16:38:21-05:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -24,6 +24,116 @@
     </author>
   
 
+  
+  
+    <entry>
+      
+      <title type="html">IDEs are dead. Long Live Development Environments. (Part 1)</title>
+      
+      
+      <link href="https://software.themikejr.com/step-away-from-your-ide/" rel="alternate" type="text/html" title="IDEs are dead. Long Live Development Environments. (Part 1)" />
+      
+      <published>2019-01-05T00:00:00-05:00</published>
+      <updated>2019-01-05T00:00:00-05:00</updated>
+      <id>https://software.themikejr.com/step-away-from-your-ide</id>
+      <content type="html" xml:base="https://software.themikejr.com/step-away-from-your-ide/">&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
+
+&lt;p&gt;Generally, I don’t think there are one-size-fits-all solutions in software development and engineering. I’m going to argue that it will be good for you to step away from your IDE because it was good for me to do so. If you totally disagree with me, that’s cool! Tell me your experience in the comments section.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-sacrifice-you-didnt-know-you-were-making&quot;&gt;The Sacrifice You Didn’t Know You Were Making&lt;/h2&gt;
+
+&lt;p&gt;When it comes to being productive as a software developer there are many categories of personality that manifest regarding productivity. I speak from experience here, I’ve dabbled in nearly all of these. There are coffee addicts, nootropic pill-poppers, noise-cancelling headphone donners, binaural beat dweebs, flow-state seekers, text-editor worshippers, point-and-click mouse nuts, keyboard-only wingdings, the list goes on. I would like to take this moment to introduce what I consider a dangerous software developer personality, &lt;em&gt;the IDE indentured servant&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The IDE indentured servant is the person who relies on their trusty IDE as a prized productivity tool but doesn’t realize that it’s actually holding them back. Whatever gains they may have gotten in short-term productivity (which I believe is a &lt;em&gt;false&lt;/em&gt; productivity), they completely sacrifice when it comes to long-term productivity.&lt;/p&gt;
+
+&lt;p&gt;I’m here to tell you today that &lt;em&gt;IDEs are a drain on your productivity&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use an IDE if you want to stunt your software developer development.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use an IDE if you want to be a &lt;em&gt;lesser&lt;/em&gt; developer.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Do I have your attention? Cool.&lt;/p&gt;
+
+&lt;p&gt;Let’s go back to productivity for a second. Everyone knows a developer who’s measure of productivity is getting a feature deployed to a test environment so that they can start the next feature. These are the people who feel good about getting something ‘done’. These are also the people who usually forget to finish things in my experience. I have trouble with this myself actually. The gratification I get from ‘finishing’ something can lead me to prematurely move onto something else if I’m not careful. Let’s call this &lt;em&gt;short term productivity&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Conversely we have &lt;em&gt;long term productivity&lt;/em&gt;; finishing things that provide value and getting them right.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Slow is smooth and smooth is fast.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Measure twice and cut once.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There is truth to these aphorisms! (not least because Phil Dunphy champions the former). It’s the developer who desires long term productivity that needs to ditch her IDE.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-the-ide-hate&quot;&gt;Why the IDE hate?&lt;/h2&gt;
+
+&lt;p&gt;Think about what an IDE actually does. The most charitable description would be that it ties together many tools and utilizes them to give instant feedback to the developer. This actually might be true, but there is one terrible side effect that most don’t consider: IDEs abstract the developer away from the very tools that they are using. This abstraction generates a distance between the developer and their tools. This distance may be helpful in the short term (imagine training wheels on a bike) but will only hurt in the long term (try riding your bike off road being dependent on training wheels).&lt;/p&gt;
+
+&lt;p&gt;Don’t believe me?&lt;/p&gt;
+
+&lt;p&gt;Consider this for a moment: &lt;em&gt;becoming competently productive with a particular IDE is orthogonal to being competently productive in a given language technology stack&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Learning how to use an IDE doesn’t actually teach you how to use the underlying tools that it ‘integrates’. Please join me in a short though experiment.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-junior-developer--git&quot;&gt;The Junior Developer + Git&lt;/h3&gt;
+
+&lt;p&gt;Take version control for example. Imagine a junior developer who joins a team and begins their first project, which happens to be written in Ruby. For the sake of the experiment, imagine that they know nothing about Git. They reach for the RubyMine IDE from JetBrains. RubyMine has a fair amount of VCS tooling off the shelf that helps you do things with Git. There is some overlap between the terminology used by RubyMine’s VCS features and the Git CLI, but it’s not 100%.&lt;/p&gt;
+
+&lt;p&gt;So the junior dev works on this project for 6 months.  They’ve been using the RubyMine VCS tools to commit and push their changes. At the end of 6 months, how much have they learned about Git?&lt;/p&gt;
+
+&lt;p&gt;I think we all know the answer. They have learned &lt;em&gt;very little&lt;/em&gt; about Git. They have probably memorized the menu items or keyboard shortcuts that are needed to commit and push to a branch, but they probably aren’t aware of the differences between the Git index, staged files, and committed files for example.&lt;/p&gt;
+
+&lt;p&gt;I’m not saying it’s logically necessary for a developer to know the internals of Git to be successful. Being a software developer is about providing value to the people that we are making the software for. You don’t have to be a Git ninja to provide value. However, There will be a point though when the developer who doesn’t know Git very well will likely lose some of their work, blow away a remote branch accidentally, or get very confused when someone asks them to “Cherry pick” a commit. In this moment who is the person that every one turns to? It’s the guy who always uses the Git CLI.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-personal-experience&quot;&gt;Some Personal Experience&lt;/h3&gt;
+
+&lt;p&gt;My first project was in Java and we used CVS (shudder) for version control. I used the CVS tooling built into Eclipse every time I pushed, pulled, compared, etc… just like the rest of my team. There was one time where something went horribly wrong with the CVS repo on our CVS server. You know who my team needed help from to get it fixed? The token Emacs user that sat near us. He had been using the CVS CLI all along. He made quick work of the problem that we had. It was trivial enough for him to fix  that none of us ever understood what the problem was.&lt;/p&gt;
+
+&lt;p&gt;I humbly suggest that this will happen not only with VCS tools but dependency management tools, interpreters, compilers, application servers, linters, code coverage tools, and build tooling.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-sum&quot;&gt;In Sum&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;In order to integrate developer tools into a single environment, IDEs abstract tooling away which has the unfortunate side effect of obscuring the developer from their tooling&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is my contention that this may be good for short-term productivity, but is almost certainly bad for long-term productivity.&lt;/p&gt;
+
+&lt;p&gt;Come back soon to check out the next part in this series where I explain why building my own development environment was so beneficial for me.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Do you completely disagree with me? Excellent! Please let me know in the comments. Otherwise, stay tuned for Part 2 of this series: &lt;em&gt;The Benefits of Building Your Own IDE&lt;/em&gt;.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+        <author>
+            <name>Mike Brinker</name>
+          
+          
+        </author>
+      
+
+      
+        <category term="Tools" />
+      
+
+      
+
+      
+        <summary type="html">Preface</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
