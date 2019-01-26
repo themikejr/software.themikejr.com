@@ -5,15 +5,15 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2019-01-21T16:10:31-05:00</updated>
+  <updated>2019-01-26T09:47:58-05:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
-    <title type="html">Mike Brinker</title>
+    <title type="html">Mike Brinker on Software Development</title>
   
 
   
-    <subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle>
+    <subtitle>Thoughts, opinions, proposals, and lessons-learned from the mind of a Software Developer.</subtitle>
   
 
   
@@ -24,6 +24,124 @@
     </author>
   
 
+  
+  
+    <entry>
+      
+      <title type="html">The One-Hand Approach to Production Support</title>
+      
+      
+      <link href="https://software.themikejr.com/one-hand-approach-to-production-support/" rel="alternate" type="text/html" title="The One-Hand Approach to Production Support" />
+      
+      <published>2019-01-26T00:00:00-05:00</published>
+      <updated>2019-01-26T00:00:00-05:00</updated>
+      <id>https://software.themikejr.com/one-hand-approach-to-production-support</id>
+      <content type="html" xml:base="https://software.themikejr.com/one-hand-approach-to-production-support/">&lt;p&gt;Across the industry, as the teams trend away from being project-focused toward being product-focused, an increasing number of software developers find themselves being responsible for ‘support duties’. These responsibilities may include answering user questions, attempting to recreate reported bugs, and trying to recover from a system outage in production. There are reasons why it is good (this is the spirit of &lt;em&gt;DevOps&lt;/em&gt; in my opinion) that developers will increasingly participate in these duties, but for teams that are taking these responsibilities on for the first time, confusion abounds.&lt;/p&gt;
+
+&lt;h2 id=&quot;assumptions&quot;&gt;Assumptions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Production incidents &lt;em&gt;will&lt;/em&gt; happen&lt;/li&gt;
+  &lt;li&gt;It is in the best interest of the team and product for developers to become skilled at handing production incidents&lt;/li&gt;
+  &lt;li&gt;We should aspire to &lt;a href=&quot;https://en.wikipedia.org/wiki/Antifragility&quot;&gt;Antifragility&lt;/a&gt; in our systems, our teams, and as individuals.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-all-hands-by-default-approach&quot;&gt;The All-Hands by Default Approach&lt;/h2&gt;
+
+&lt;p&gt;To my surprise I have seen managers and developers who prefer an unorganized, all-hands approach to production support. Typically, a scenario will play out like this:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Production incident is reported to some sort of channel that is ‘public’ to all developers&lt;/li&gt;
+  &lt;li&gt;Since there is not a dedicated person to handle all issues for this given time frame, a manager type will soon be contacting developers to find out who is working on the issue.&lt;/li&gt;
+  &lt;li&gt;Meanwhile, a developer notices the problem and immediately notifies his/her peers&lt;/li&gt;
+  &lt;li&gt;Physical or virtual huddle happens and ‘all hands’ are on deck for fixing the issue&lt;/li&gt;
+  &lt;li&gt;Typically developers that have more experience with the system (or perhaps have more mature skill sets) lead the troubleshooting until a solution is found&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I suppose developers and managers might prefer this approach for the following reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Having a huddle creates an atmosphere or appearance of productivity and progress&lt;/li&gt;
+  &lt;li&gt;When all developers are in the huddle, each can suggest solutions or hypotheses that are unique to their skillset and experience (seemingly shortening the time that it takes to solve the problem)&lt;/li&gt;
+  &lt;li&gt;From a developer’s point of view, this approach may provide more &lt;em&gt;psychological safety&lt;/em&gt; since they aren’t the only one working on an issue&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;problems-of-the-all-hands-approach&quot;&gt;Problems of the All-Hands Approach&lt;/h2&gt;
+
+&lt;p&gt;There are hidden costs to the all-hands approach.&lt;/p&gt;
+
+&lt;p&gt;First, it may seem like having a support incident channel that is public to all developers is a good idea, but I think what most managers don’t realize is the amount of distraction that channels such as these create. If a developer is told that part of their job responsibility is to monitor logged incidents, their concentration is going to be almost &lt;a href=&quot;http://calnewport.com/blog/2016/09/06/a-productivity-lesson-from-a-classic-arcade-game/&quot;&gt;permanently compromised&lt;/a&gt; to some degree. One extreme example I recently heard was a developer, who faced with the responsibilities of supporting an application, opened up the application logs &lt;em&gt;every morning&lt;/em&gt; and had them visible on her screen for the entire day. If something went wrong with the application, she claimed to be able to detect a change in the shape of the text that was flowing on the screen. Imagine if this person’s manager understood that this person was compromising their concentration nearly 100% of the time to visually monitor application logs!&lt;/p&gt;
+
+&lt;p&gt;Less extreme situations still are quite a drain on a developer’s ability to focus. If you are not convinced of this I suggest taking a look at &lt;a href=&quot;http://calnewport.com/books/deep-work/&quot;&gt;Deep Work&lt;/a&gt; by Cal Newport (decent summary &lt;a href=&quot;https://fastertomaster.com/deep-work-by-cal-newport/&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;In addition to a near constant compromising of developer focus, consider the sheer &lt;em&gt;cost&lt;/em&gt; of involving everyone on the team in each production incident. As I mentioned in point number five of the &lt;em&gt;All Hands&lt;/em&gt; approach, it has often been my observation that despite all hands being present, a single developer usually ends up leading the charge at finding a solution and applying it. Given this, it is especially egregious to think that all of the members are pulled into a huddle for the incident when a subset of them will actually be contributing meaningfully to the solution.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-one-hand-by-default-approach&quot;&gt;The One-Hand (by Default) Approach&lt;/h2&gt;
+
+&lt;p&gt;What if I could suggest an approach to handling production support that decreased distraction to the team and fostered improvement of skills and self-confidence for individual developers? That’s exactly what the &lt;em&gt;One-Hand&lt;/em&gt; approach is. It goes something like this:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Notifications of production incidents are fed to a developer who is ‘on call’ for the given time period (let’s say they are on call for the current week). Developers who are not on call are expected to continue with their normal work.&lt;/li&gt;
+  &lt;li&gt;The developer works with the user (and outside teams if necessary) to resolve the issue.&lt;/li&gt;
+  &lt;li&gt;The on-call developer knows that as a case of last-resort, they can involve their mentor (a developer peer) or lead to get the issue resolved.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;With such an approach you decrease developer distraction and increase individual problem solving skills over time.&lt;/p&gt;
+
+&lt;p&gt;There are some cultural presuppositions that need to be installed for this to work properly. Primarily, the developer on call needs to see a production incident as an individually assigned challenge — from which they can learn and be gratified for solving. Additionally, the developer on call needs to understand that they are providing value as they protect the team from distraction, meanwhile the team as a whole needs to cherish distraction-free focus time (aka “Deep Work”) as a means to applying their unique skillsets so that they can deliver value.&lt;/p&gt;
+
+&lt;p&gt;Finally, the decision to bring another developer into a huddle needs to be understood as something undesirable but potentially necessary in a given instance. The developer on-call should set out thinking of pulling someone else in as a last resort, but the rest of the team should not think of this as an &lt;em&gt;ostrasizable&lt;/em&gt; offense. If the team is mature enough to work under these assumptions, the One-Hand approach yields the following benefits:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Protects the majority of the team from distraction&lt;/li&gt;
+  &lt;li&gt;Removes the latent stress of the entire team watching a public channel, waiting for something bad to happen&lt;/li&gt;
+  &lt;li&gt;Forces all team members to ‘level up’ the various skills needed for production support&lt;/li&gt;
+  &lt;li&gt;Each developer who handles an incident will have increased confidence and know-how&lt;/li&gt;
+  &lt;li&gt;Over time you decrease the amount of single-person dependencies the team has&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This approach goes hand-in-hand with the idea of Antifragility. A team needs to be strengthened by various stressors in its environment. A system needs ‘adaptive fault tolerance’ (See the &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S1877050916302290&quot;&gt;Antifragile Software Manifesto&lt;/a&gt;). An individual needs to be tested and strengthened to a degree in order to become better (interestingly, Jonathan Haidt even &lt;a href=&quot;https://www.youtube.com/watch?v=tvb7R6GF6CU&quot;&gt;applies Antifragility&lt;/a&gt; to childhood development).&lt;/p&gt;
+
+&lt;h2 id=&quot;in-sum&quot;&gt;In Sum&lt;/h2&gt;
+
+&lt;p&gt;Yes, there might be some situations where the All-Hands approach is needed. If these instances are not rare on your team, something else is probably gravely wrong.&lt;/p&gt;
+
+&lt;p&gt;Yes, the lead of the team or mentor will still be generally distracted as junior developers come to them with production incidents. This is the sad, lonely road  walked by the developer who chooses to mentor or take the lead on a team.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, the One-hand (by default) approach ends up delivering a more focused and capable team and a generally saner work environment.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Do you violently disagree me? Do you have a legendary story from that night you were on-call? Let me know in the comments.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+        <author>
+            <name>Mike Brinker</name>
+          
+          
+        </author>
+      
+
+      
+        <category term="Teams" />
+      
+
+      
+
+      
+        <summary type="html">Across the industry, as the teams trend away from being project-focused toward being product-focused, an increasing number of software developers find themselves being responsible for ‘support duties’. These responsibilities may include answering user questions, attempting to recreate reported bugs, and trying to recover from a system outage in production. There are reasons why it is good (this is the spirit of DevOps in my opinion) that developers will increasingly participate in these duties, but for teams that are taking these responsibilities on for the first time, confusion abounds.</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>

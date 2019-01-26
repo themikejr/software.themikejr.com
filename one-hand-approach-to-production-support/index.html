@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>The One-Hand Approach to Production Support</title>
+  <meta name="description" content="Across the industry, as the teams trend away from being project-focused toward being product-focused, an increasing number of software developers find themselves being responsible for ‘support duties’. These responsibilities may include answering user questions, attempting to recreate reported bugs, and trying to recover from a system outage in production. There are reasons why it is good (this is the spirit of DevOps in my opinion) that developers will increasingly participate in these duties, but for teams that are taking these responsibilities on for the first time, confusion abounds.">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://software.themikejr.com/one-hand-approach-to-production-support/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Mike Brinker on Software Development" href="https://software.themikejr.com/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="themikejr">
+  <meta name="twitter:title" content="The One-Hand Approach to Production Support">
+  <meta name="twitter:description" content="Across the industry, as the teams trend away from being project-focused toward being product-focused, an increasing number of software developers find themselves being responsible for ‘support duti...">
+  
+    <meta name="twitter:creator" content="themikejr">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113905671-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113905671-2' );
+</script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <img style="float:left;padding-right:5px" src="/assets/logo.png" height="45" width=45>
+    <a class="site-title" href="/">Mike Brinker on Software Development</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    
+      <h1 class="post-title" itemprop="name headline">The One-Hand Approach to Production Support</h1>
+    
+    <p class="post-meta post-subtitle">Preserve developer focus, nurture developer autonomy</p>
+    <p class="post-meta"><time datetime="2019-01-26T00:00:00-05:00" itemprop="datePublished">Jan 26, 2019</time> •
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a href="/categories/teams/">Teams</a>
+      
+    
+  
+
+
+
+</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Across the industry, as the teams trend away from being project-focused toward being product-focused, an increasing number of software developers find themselves being responsible for ‘support duties’. These responsibilities may include answering user questions, attempting to recreate reported bugs, and trying to recover from a system outage in production. There are reasons why it is good (this is the spirit of <em>DevOps</em> in my opinion) that developers will increasingly participate in these duties, but for teams that are taking these responsibilities on for the first time, confusion abounds.</p>
+
+<h2 id="assumptions">Assumptions</h2>
+
+<ul>
+  <li>Production incidents <em>will</em> happen</li>
+  <li>It is in the best interest of the team and product for developers to become skilled at handing production incidents</li>
+  <li>We should aspire to <a href="https://en.wikipedia.org/wiki/Antifragility">Antifragility</a> in our systems, our teams, and as individuals.</li>
+</ul>
+
+<h2 id="the-all-hands-by-default-approach">The All-Hands by Default Approach</h2>
+
+<p>To my surprise I have seen managers and developers who prefer an unorganized, all-hands approach to production support. Typically, a scenario will play out like this:</p>
+
+<ol>
+  <li>Production incident is reported to some sort of channel that is ‘public’ to all developers</li>
+  <li>Since there is not a dedicated person to handle all issues for this given time frame, a manager type will soon be contacting developers to find out who is working on the issue.</li>
+  <li>Meanwhile, a developer notices the problem and immediately notifies his/her peers</li>
+  <li>Physical or virtual huddle happens and ‘all hands’ are on deck for fixing the issue</li>
+  <li>Typically developers that have more experience with the system (or perhaps have more mature skill sets) lead the troubleshooting until a solution is found</li>
+</ol>
+
+<p>I suppose developers and managers might prefer this approach for the following reasons:</p>
+
+<ul>
+  <li>Having a huddle creates an atmosphere or appearance of productivity and progress</li>
+  <li>When all developers are in the huddle, each can suggest solutions or hypotheses that are unique to their skillset and experience (seemingly shortening the time that it takes to solve the problem)</li>
+  <li>From a developer’s point of view, this approach may provide more <em>psychological safety</em> since they aren’t the only one working on an issue</li>
+</ul>
+
+<h2 id="problems-of-the-all-hands-approach">Problems of the All-Hands Approach</h2>
+
+<p>There are hidden costs to the all-hands approach.</p>
+
+<p>First, it may seem like having a support incident channel that is public to all developers is a good idea, but I think what most managers don’t realize is the amount of distraction that channels such as these create. If a developer is told that part of their job responsibility is to monitor logged incidents, their concentration is going to be almost <a href="http://calnewport.com/blog/2016/09/06/a-productivity-lesson-from-a-classic-arcade-game/">permanently compromised</a> to some degree. One extreme example I recently heard was a developer, who faced with the responsibilities of supporting an application, opened up the application logs <em>every morning</em> and had them visible on her screen for the entire day. If something went wrong with the application, she claimed to be able to detect a change in the shape of the text that was flowing on the screen. Imagine if this person’s manager understood that this person was compromising their concentration nearly 100% of the time to visually monitor application logs!</p>
+
+<p>Less extreme situations still are quite a drain on a developer’s ability to focus. If you are not convinced of this I suggest taking a look at <a href="http://calnewport.com/books/deep-work/">Deep Work</a> by Cal Newport (decent summary <a href="https://fastertomaster.com/deep-work-by-cal-newport/">here</a>).</p>
+
+<p>In addition to a near constant compromising of developer focus, consider the sheer <em>cost</em> of involving everyone on the team in each production incident. As I mentioned in point number five of the <em>All Hands</em> approach, it has often been my observation that despite all hands being present, a single developer usually ends up leading the charge at finding a solution and applying it. Given this, it is especially egregious to think that all of the members are pulled into a huddle for the incident when a subset of them will actually be contributing meaningfully to the solution.</p>
+
+<h2 id="the-one-hand-by-default-approach">The One-Hand (by Default) Approach</h2>
+
+<p>What if I could suggest an approach to handling production support that decreased distraction to the team and fostered improvement of skills and self-confidence for individual developers? That’s exactly what the <em>One-Hand</em> approach is. It goes something like this:</p>
+
+<ol>
+  <li>Notifications of production incidents are fed to a developer who is ‘on call’ for the given time period (let’s say they are on call for the current week). Developers who are not on call are expected to continue with their normal work.</li>
+  <li>The developer works with the user (and outside teams if necessary) to resolve the issue.</li>
+  <li>The on-call developer knows that as a case of last-resort, they can involve their mentor (a developer peer) or lead to get the issue resolved.</li>
+</ol>
+
+<p>With such an approach you decrease developer distraction and increase individual problem solving skills over time.</p>
+
+<p>There are some cultural presuppositions that need to be installed for this to work properly. Primarily, the developer on call needs to see a production incident as an individually assigned challenge — from which they can learn and be gratified for solving. Additionally, the developer on call needs to understand that they are providing value as they protect the team from distraction, meanwhile the team as a whole needs to cherish distraction-free focus time (aka “Deep Work”) as a means to applying their unique skillsets so that they can deliver value.</p>
+
+<p>Finally, the decision to bring another developer into a huddle needs to be understood as something undesirable but potentially necessary in a given instance. The developer on-call should set out thinking of pulling someone else in as a last resort, but the rest of the team should not think of this as an <em>ostrasizable</em> offense. If the team is mature enough to work under these assumptions, the One-Hand approach yields the following benefits:</p>
+
+<ul>
+  <li>Protects the majority of the team from distraction</li>
+  <li>Removes the latent stress of the entire team watching a public channel, waiting for something bad to happen</li>
+  <li>Forces all team members to ‘level up’ the various skills needed for production support</li>
+  <li>Each developer who handles an incident will have increased confidence and know-how</li>
+  <li>Over time you decrease the amount of single-person dependencies the team has</li>
+</ul>
+
+<p>This approach goes hand-in-hand with the idea of Antifragility. A team needs to be strengthened by various stressors in its environment. A system needs ‘adaptive fault tolerance’ (See the <a href="https://www.sciencedirect.com/science/article/pii/S1877050916302290">Antifragile Software Manifesto</a>). An individual needs to be tested and strengthened to a degree in order to become better (interestingly, Jonathan Haidt even <a href="https://www.youtube.com/watch?v=tvb7R6GF6CU">applies Antifragility</a> to childhood development).</p>
+
+<h2 id="in-sum">In Sum</h2>
+
+<p>Yes, there might be some situations where the All-Hands approach is needed. If these instances are not rare on your team, something else is probably gravely wrong.</p>
+
+<p>Yes, the lead of the team or mentor will still be generally distracted as junior developers come to them with production incidents. This is the sad, lonely road  walked by the developer who chooses to mentor or take the lead on a team.</p>
+
+<p>Ultimately, the One-hand (by default) approach ends up delivering a more focused and capable team and a generally saner work environment.</p>
+
+<hr />
+
+<p>Do you violently disagree me? Do you have a legendary story from that night you were on-call? Let me know in the comments.</p>
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://software.themikejr.com/one-hand-approach-to-production-support/';
+      this.page.identifier = 'https://software.themikejr.com/one-hand-approach-to-production-support/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://themikejr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+&copy; Mike Brinker - Powered by <a class="post-link" href="https://jekyllrb.com">Jekyll</a> &amp; <a class="post-link" href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a class="post-link" href="https://software.themikejr.com/feed.xml">RSS</a>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
