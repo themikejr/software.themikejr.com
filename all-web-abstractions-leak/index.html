@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>All Web Abstractions Leak</title>
+  <meta name="description" content="Gary Bernhardt had a great thread on twitter recently.">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://software.themikejr.com/all-web-abstractions-leak/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Mike Brinker on Software Development" href="https://software.themikejr.com/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="themikejr">
+  <meta name="twitter:title" content="All Web Abstractions Leak">
+  <meta name="twitter:description" content="Gary Bernhardt had a great thread on twitter recently.">
+  
+    <meta name="twitter:creator" content="themikejr">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113905671-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113905671-2' );
+</script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <img style="float:left;padding-right:5px" src="/assets/logo.png" height="45" width=45>
+    <a class="site-title" href="/">Mike Brinker</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    
+      <h1 class="post-title" itemprop="name headline">All Web Abstractions Leak</h1>
+    
+    <p class="post-meta post-subtitle">Leaky abstractions make men old and grumpy</p>
+    <p class="post-meta"><time datetime="2019-02-02T00:00:00-05:00" itemprop="datePublished">Feb 2, 2019</time> •
+  
+    
+    
+      
+        <a href="/categories/what-i-ve-been-reading/">What I&#39;ve Been Reading</a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+
+
+</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><a href="https://twitter.com/garybernhardt">Gary Bernhardt</a> had a great thread on twitter recently.</p>
+
+<blockquote>
+  <p>There’s no such thing as abstraction in web tools and never has been. Every framework claims that it will hide the complexity from you, but it always leaks through. You end up having to understand the framework, its dependencies, and the web primitives they’re built on.</p>
+</blockquote>
+
+<p>When I first joined a software development team, I remember having my mind <em>blown</em> as someone on the team walked me through the layers that made up the application. It was a SpringMVC web app that consisted of a view described the user interface, a model that held the data to be plugged into the view, and a controller that tied the model and view together and served requests. Hibernate was also involved in retrieving the data that populated the model. It was like staring under the hood of a car for the first time, seeing how carefully chosen components worked together to create this thing called a ‘web app’. All of those layers! Not to mentioned future joys I would experience like debugging an ORM, tuning a database, becoming fluent in the unspeakable incomprehensibilites of WebSphere, learning languages that compile into other languages, and all of the other things I’ve buried in my subconscious. Early on though it was fascinating to see those layers and exciting to think I was going to be able to contribute to the creation of an application <em>that someone would be using</em> in real life.</p>
+
+<p>Now days though, when I consider all of the things someone might have to learn in order to be a productive web developer, it really is daunting. The markup languages, stylesheets, a javascript framework, a language that compiled to JS, a build tool and dependency management, all just for the client side of the application. Imagining a world where the web (good luck well-defining that btw) is as abstracted to a developer and my operating system is to me… well it seems to good to be true.</p>
+
+<p>The thread as some great examples and comments from others. <a href="https://threadreaderapp.com/thread/1088523317089169408.html">Read it unrolled</a> on ThreadReader.</p>
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://software.themikejr.com/all-web-abstractions-leak/';
+      this.page.identifier = 'https://software.themikejr.com/all-web-abstractions-leak/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://themikejr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+<span class="pull-left">&copy; 2019, Mike Brinker. All rights reserved.</span>
+
+<span class="pull-right">ad fontes.</span>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
