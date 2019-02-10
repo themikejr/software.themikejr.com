@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>IDEs are dead. Long Live Development Environments. (Part 3)</title>
+  <meta name="description" content="I’ve already written about why you should step away from your IDE and how I’ve benefited from doing so. Now let’s take a look at how this can be accomplished. As always these steps are based on my experience as a finite human being and thus your mileage may vary. The five steps are:">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://software.themikejr.com/build-a-development-environment/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Mike Brinker on Software Development" href="https://software.themikejr.com/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="themikejr">
+  <meta name="twitter:title" content="IDEs are dead. Long Live Development Environments. (Part 3)">
+  <meta name="twitter:description" content="I’ve already written about why you should step away from your IDE and how I’ve benefited from doing so. Now let’s take a look at how this can be accomplished. As always these steps are based on my ...">
+  
+    <meta name="twitter:creator" content="themikejr">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113905671-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113905671-2' );
+</script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <img style="float:left;padding-right:5px" src="/assets/logo.png" height="45" width=45>
+    <a class="site-title" href="/">Mike Brinker</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    
+      <h1 class="post-title" itemprop="name headline">IDEs are dead. Long Live Development Environments. (Part 3)</h1>
+    
+    <p class="post-meta post-subtitle">Five steps to getting away from your IDE, mastering your tools, and building your own development environment.</p>
+    <p class="post-meta"><time datetime="2019-02-10T00:00:00-05:00" itemprop="datePublished">Feb 10, 2019</time> •
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+        <a href="/categories/tools/">Tools</a>
+      
+    
+      
+    
+  
+
+
+
+</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I’ve already written about <a href="/step-away-from-your-ide/">why you should step away from your IDE</a> and <a href="/benefits-of-stepping-away-from-your-ide/">how I’ve benefited from doing so</a>. Now let’s take a look at how this can be accomplished. As always these steps are based on my experience as a finite human being and thus your mileage may vary. The five steps are:</p>
+
+<h2 id="1-begin-using-a-single-tool-directly-outside-of-your-ide">1. Begin using a single tool directly, outside of your IDE.</h2>
+
+<p>The first step is begin interacting directly with one of the tools that your IDE abstracts.
+Choose a tool, and make it a goal to only use it directly (rather than from inside of your IDE) from now on.
+Use the interface that that the tool defaults to. For example, if you choose to use Git directly, use the command line interface rather than another third party client.
+If nothing else you will gain the advantage of learning a particular tools in more depth. Some ideas for which tool to pick:</p>
+
+<ul>
+  <li>Dependency Management</li>
+  <li>Build System</li>
+  <li>Version Control</li>
+  <li>Test Execution / Coverage</li>
+  <li>Code Quality / Linting Tools</li>
+  <li>Application Servers</li>
+</ul>
+
+<h2 id="2-use-all-tools-directly-eventually-only-rely-on-the-text-editor-in-your-ide">2. Use all tools directly. Eventually only rely on the text editor in your IDE.</h2>
+
+<p>Repeat step one until you can use all or most of your development tools directly rather than through your IDE. The goal here is for the IDE to basically just become a text editor. At this point your development experience might feel slower than it was before, but what you lose in daily productivity will be rewarded in the long run with a better knowledge and command of your tools.</p>
+
+<p>This isn’t the place that you want to be long term, so work to get a good understanding of your tools quickly so that you can move onto steps 3 and 4.</p>
+
+<h2 id="3-switch-text-editors">3. Switch text editors.</h2>
+
+<p>Once you reach step two, you will most likely realize that your IDE is not a great text editor. It’s big, slow, and is most likely lacking advanced features that specialized text editors have. Now that you only really have your IDE because you need a text editor, it’s time to find a <em>your</em> text editor. Finding the right text editor could be a blog series of its own, but here are a few things to think about.</p>
+
+<p>Finding <em>your</em> text editor is what some will call a journey. Ideally you want something that has:</p>
+
+<ul>
+  <li>cross platform support</li>
+  <li>large online community</li>
+  <li>customization capabilities</li>
+  <li>staying power</li>
+</ul>
+
+<p>Text editors that have these qualities will like have a larger learning curve, but that’s ok! You spend hours of your life editing text <em>every day</em>. Why not dig in and get good at it? I’m not the first one to say this:</p>
+
+<blockquote>
+  <p>Use a Single Editor Well</p>
+
+  <p>The editor should be an extension of your hand; make sure your editor is configurable, extensible, and programmable.</p>
+
+  <p>(From <em>The Pragmatic Programmer)</em></p>
+</blockquote>
+
+<h2 id="4-slowly-bring-ide-functionality-into-your-text-editor">4. Slowly bring IDE functionality into your text editor.</h2>
+
+<p>This step always in progress for most developers. Once you are on the path to mastering your text editor, you will find it beneficial to begin adding little shortcuts to your editor to increase your productivity. For example, rather than switching to new terminal window to run your unit tests, write a macro (or something equivalent for your editor… perhaps a plugin?) that runs all tests in the visible file based upon a keystroke of your choice. Some ideas to enhance productivity in your editor:</p>
+
+<ul>
+  <li>A fuzzy finder for file contents or names</li>
+  <li>Ability to see the VCS history for a given file</li>
+  <li>A shortcut to automatically format markup (chunks of XML, JSON, etc…)</li>
+</ul>
+
+<p>At this point I anticipate some objections. Why leave your IDE if the goal is just to rebuild it eventually?
+ There are two main reasons why bringing functionality back into your text editor is not just an insane re-doing of what you already had with your IDE.</p>
+
+<p>First, recognize that by this point you have gained an enhanced knowledge of all the tools in your toolkit and become a text editing wizard. Any shortcut you add back is added from a position of knowledge (of your tools) rather than dependence (on your IDE).</p>
+
+<p>Second, with this approach you only bring what modifications you need. You will end up with something much lighter than an IDE overall.</p>
+
+<h2 id="5-build-your-environment">5. Build your environment.</h2>
+
+<p>Now that you are living and working with a set of development tools that you have glued together through your expert knowledge and experience, you can take it one step farther by noticing patterns in your daily development activities and automating those. For example, if you find yourself opening the same three terminal emulator tabs (and starting various tools in them) write a script that does that!</p>
+
+<ul>
+  <li>Terminal Emulator: Customized Windows, Tabs, and Panes</li>
+  <li>A Tiling Window Manager: i3, xmonad, kwm, Amethyst</li>
+  <li>Window Manager with the Terminal: Tmux, Tmuxinator, Screen</li>
+  <li>Make your environment portable: Store your configurations on GitHub or create a docker image that houses all of your tools and their dependencies</li>
+</ul>
+
+<hr />
+
+<p>This is how I broke my dependence on an IDE. Have you? Let’s hear how you did it in the comments.</p>
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://software.themikejr.com/build-a-development-environment/';
+      this.page.identifier = 'https://software.themikejr.com/build-a-development-environment/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://themikejr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+<span class="pull-left">&copy; 2019, Mike Brinker. All rights reserved.</span>
+
+<span class="pull-right">ad fontes.</span>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

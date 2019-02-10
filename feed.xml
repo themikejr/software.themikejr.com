@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2019-02-02T11:08:22-05:00</updated>
+  <updated>2019-02-10T15:55:16-05:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -24,6 +24,125 @@
     </author>
   
 
+  
+  
+    <entry>
+      
+      <title type="html">IDEs are dead. Long Live Development Environments. (Part 3)</title>
+      
+      
+      <link href="https://software.themikejr.com/build-a-development-environment/" rel="alternate" type="text/html" title="IDEs are dead. Long Live Development Environments. (Part 3)" />
+      
+      <published>2019-02-10T00:00:00-05:00</published>
+      <updated>2019-02-10T00:00:00-05:00</updated>
+      <id>https://software.themikejr.com/build-a-development-environment</id>
+      <content type="html" xml:base="https://software.themikejr.com/build-a-development-environment/">&lt;p&gt;I’ve already written about &lt;a href=&quot;/step-away-from-your-ide/&quot;&gt;why you should step away from your IDE&lt;/a&gt; and &lt;a href=&quot;/benefits-of-stepping-away-from-your-ide/&quot;&gt;how I’ve benefited from doing so&lt;/a&gt;. Now let’s take a look at how this can be accomplished. As always these steps are based on my experience as a finite human being and thus your mileage may vary. The five steps are:&lt;/p&gt;
+
+&lt;h2 id=&quot;1-begin-using-a-single-tool-directly-outside-of-your-ide&quot;&gt;1. Begin using a single tool directly, outside of your IDE.&lt;/h2&gt;
+
+&lt;p&gt;The first step is begin interacting directly with one of the tools that your IDE abstracts.
+Choose a tool, and make it a goal to only use it directly (rather than from inside of your IDE) from now on.
+Use the interface that that the tool defaults to. For example, if you choose to use Git directly, use the command line interface rather than another third party client.
+If nothing else you will gain the advantage of learning a particular tools in more depth. Some ideas for which tool to pick:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dependency Management&lt;/li&gt;
+  &lt;li&gt;Build System&lt;/li&gt;
+  &lt;li&gt;Version Control&lt;/li&gt;
+  &lt;li&gt;Test Execution / Coverage&lt;/li&gt;
+  &lt;li&gt;Code Quality / Linting Tools&lt;/li&gt;
+  &lt;li&gt;Application Servers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-use-all-tools-directly-eventually-only-rely-on-the-text-editor-in-your-ide&quot;&gt;2. Use all tools directly. Eventually only rely on the text editor in your IDE.&lt;/h2&gt;
+
+&lt;p&gt;Repeat step one until you can use all or most of your development tools directly rather than through your IDE. The goal here is for the IDE to basically just become a text editor. At this point your development experience might feel slower than it was before, but what you lose in daily productivity will be rewarded in the long run with a better knowledge and command of your tools.&lt;/p&gt;
+
+&lt;p&gt;This isn’t the place that you want to be long term, so work to get a good understanding of your tools quickly so that you can move onto steps 3 and 4.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-switch-text-editors&quot;&gt;3. Switch text editors.&lt;/h2&gt;
+
+&lt;p&gt;Once you reach step two, you will most likely realize that your IDE is not a great text editor. It’s big, slow, and is most likely lacking advanced features that specialized text editors have. Now that you only really have your IDE because you need a text editor, it’s time to find a &lt;em&gt;your&lt;/em&gt; text editor. Finding the right text editor could be a blog series of its own, but here are a few things to think about.&lt;/p&gt;
+
+&lt;p&gt;Finding &lt;em&gt;your&lt;/em&gt; text editor is what some will call a journey. Ideally you want something that has:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cross platform support&lt;/li&gt;
+  &lt;li&gt;large online community&lt;/li&gt;
+  &lt;li&gt;customization capabilities&lt;/li&gt;
+  &lt;li&gt;staying power&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Text editors that have these qualities will like have a larger learning curve, but that’s ok! You spend hours of your life editing text &lt;em&gt;every day&lt;/em&gt;. Why not dig in and get good at it? I’m not the first one to say this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Use a Single Editor Well&lt;/p&gt;
+
+  &lt;p&gt;The editor should be an extension of your hand; make sure your editor is configurable, extensible, and programmable.&lt;/p&gt;
+
+  &lt;p&gt;(From &lt;em&gt;The Pragmatic Programmer)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;4-slowly-bring-ide-functionality-into-your-text-editor&quot;&gt;4. Slowly bring IDE functionality into your text editor.&lt;/h2&gt;
+
+&lt;p&gt;This step always in progress for most developers. Once you are on the path to mastering your text editor, you will find it beneficial to begin adding little shortcuts to your editor to increase your productivity. For example, rather than switching to new terminal window to run your unit tests, write a macro (or something equivalent for your editor… perhaps a plugin?) that runs all tests in the visible file based upon a keystroke of your choice. Some ideas to enhance productivity in your editor:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A fuzzy finder for file contents or names&lt;/li&gt;
+  &lt;li&gt;Ability to see the VCS history for a given file&lt;/li&gt;
+  &lt;li&gt;A shortcut to automatically format markup (chunks of XML, JSON, etc…)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At this point I anticipate some objections. Why leave your IDE if the goal is just to rebuild it eventually?
+ There are two main reasons why bringing functionality back into your text editor is not just an insane re-doing of what you already had with your IDE.&lt;/p&gt;
+
+&lt;p&gt;First, recognize that by this point you have gained an enhanced knowledge of all the tools in your toolkit and become a text editing wizard. Any shortcut you add back is added from a position of knowledge (of your tools) rather than dependence (on your IDE).&lt;/p&gt;
+
+&lt;p&gt;Second, with this approach you only bring what modifications you need. You will end up with something much lighter than an IDE overall.&lt;/p&gt;
+
+&lt;h2 id=&quot;5-build-your-environment&quot;&gt;5. Build your environment.&lt;/h2&gt;
+
+&lt;p&gt;Now that you are living and working with a set of development tools that you have glued together through your expert knowledge and experience, you can take it one step farther by noticing patterns in your daily development activities and automating those. For example, if you find yourself opening the same three terminal emulator tabs (and starting various tools in them) write a script that does that!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Terminal Emulator: Customized Windows, Tabs, and Panes&lt;/li&gt;
+  &lt;li&gt;A Tiling Window Manager: i3, xmonad, kwm, Amethyst&lt;/li&gt;
+  &lt;li&gt;Window Manager with the Terminal: Tmux, Tmuxinator, Screen&lt;/li&gt;
+  &lt;li&gt;Make your environment portable: Store your configurations on GitHub or create a docker image that houses all of your tools and their dependencies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This is how I broke my dependence on an IDE. Have you? Let’s hear how you did it in the comments.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+        <author>
+            <name>Mike Brinker</name>
+          
+          
+        </author>
+      
+
+      
+        <category term="Tools" />
+      
+
+      
+
+      
+        <summary type="html">I’ve already written about why you should step away from your IDE and how I’ve benefited from doing so. Now let’s take a look at how this can be accomplished. As always these steps are based on my experience as a finite human being and thus your mileage may vary. The five steps are:</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
@@ -243,7 +362,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;So, are you sold on the benefits of ditching your IDE yet? If so, come back soon for the last post in this series where I give the practical steps that I followed to step away from my IDE. In the meantime, let me know in the comments if you have found similar benefits.&lt;/p&gt;</content>
+&lt;p&gt;So, are you sold on the benefits of ditching your IDE yet? Read my &lt;a href=&quot;/build-a-development-environment/&quot;&gt;step-by-step guide to getting rid of your IDE&lt;/a&gt;. Otherwise, let me know in the comments if you have found similar benefits.&lt;/p&gt;</content>
 
       
       
