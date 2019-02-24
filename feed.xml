@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2019-02-16T11:41:21-05:00</updated>
+  <updated>2019-02-24T16:32:07-05:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -24,6 +24,60 @@
     </author>
   
 
+  
+  
+    <entry>
+      
+      <title type="html">Refactoring Doesn’t Require Domain Knowledge</title>
+      
+      
+      <link href="https://software.themikejr.com/refactoring-without-domain-knowledge/" rel="alternate" type="text/html" title="Refactoring Doesn't Require Domain Knowledge" />
+      
+      <published>2019-02-24T00:00:00-05:00</published>
+      <updated>2019-02-24T00:00:00-05:00</updated>
+      <id>https://software.themikejr.com/refactoring-without-domain-knowledge</id>
+      <content type="html" xml:base="https://software.themikejr.com/refactoring-without-domain-knowledge/">&lt;p&gt;I came across this great &lt;a href=&quot;https://twitter.com/GeePawHill&quot;&gt;GeePaw Hill&lt;/a&gt; &lt;a href=&quot;https://twitter.com/GeePawHill/status/1099733643734470656&quot;&gt;thread&lt;/a&gt; on twitter about refactoring and domain knowledge. The final tweet in the thread sums it up well:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;When I’m refactoring, I do my best work when I am entirely domain-blind, and am working with and thinking of all and only what the code that is actually there actually does. Prioritize reading code over studying the application domain.&lt;/p&gt;
+
+  &lt;p&gt;Have a pleasantly odd Sunday!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Over the years I have learned to trust the fact that &lt;em&gt;the code never lies&lt;/em&gt;. In addition to possibly saying some interesting things about epistemology, this aphorism has proven trustful to me time and time again. While devs (and others) &lt;del&gt;argue&lt;/del&gt; discuss what some code does, how it’s working, etc… in almost every case the wise thing to do is say very little and begin reading the code.&lt;/p&gt;
+
+&lt;p&gt;There are lessons in this thread about the value of readable code as well. In the thread, there seems to be a correlation between the refactoring effort (making the code easier to understand) and the discovery of the performance problem. The easier code is to read, the easier it is to reason about, which enables developers to make improvements to it, or at very least decreases their chance of screwing it up as they change it. An explanation of the &lt;em&gt;value&lt;/em&gt; of clean (read: readable) code is worthy of its own post.&lt;/p&gt;
+
+&lt;p&gt;Alas! The whole thread is a great read. &lt;a href=&quot;https://threadreaderapp.com/thread/1099733643734470656.html&quot;&gt;Read it unrolled&lt;/a&gt; on ThreadReader.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+        <author>
+            <name>Mike Brinker</name>
+          
+          
+        </author>
+      
+
+      
+        <category term="What I've Been Reading" />
+      
+
+      
+
+      
+        <summary type="html">I came across this great GeePaw Hill thread on twitter about refactoring and domain knowledge. The final tweet in the thread sums it up well:</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>

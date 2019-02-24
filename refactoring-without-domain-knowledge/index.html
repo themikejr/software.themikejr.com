@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Refactoring Doesn&#39;t Require Domain Knowledge</title>
+  <meta name="description" content="I came across this great GeePaw Hill thread on twitter about refactoring and domain knowledge. The final tweet in the thread sums it up well:">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://software.themikejr.com/refactoring-without-domain-knowledge/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Mike Brinker on Software Development" href="https://software.themikejr.com/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="themikejr">
+  <meta name="twitter:title" content="Refactoring Doesn&#39;t Require Domain Knowledge">
+  <meta name="twitter:description" content="I came across this great GeePaw Hill thread on twitter about refactoring and domain knowledge. The final tweet in the thread sums it up well:">
+  
+    <meta name="twitter:creator" content="themikejr">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113905671-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113905671-2' );
+</script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <img style="float:left;padding-right:5px" src="/assets/logo.png" height="45" width=45>
+    <a class="site-title" href="/">Mike Brinker</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <a rel="author" class="p-author h-card" href="https://software.themikejr.com" style="display:none;">Mike Brinker</a>
+
+  <header class="post-header">
+    
+      <h1 class="post-title p-name" itemprop="name headline">Refactoring Doesn&#39;t Require Domain Knowledge</h1>
+    
+    <p class="post-meta post-subtitle">The code never lies</p>
+    <p class="post-meta"><time class="dt-published" datetime="2019-02-24T00:00:00-05:00" itemprop="datePublished">Feb 24, 2019</time> •
+  
+    
+    
+      
+        <a href="/categories/what-i-ve-been-reading/">What I&#39;ve Been Reading</a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+
+
+</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I came across this great <a href="https://twitter.com/GeePawHill">GeePaw Hill</a> <a href="https://twitter.com/GeePawHill/status/1099733643734470656">thread</a> on twitter about refactoring and domain knowledge. The final tweet in the thread sums it up well:</p>
+
+<blockquote>
+  <p>When I’m refactoring, I do my best work when I am entirely domain-blind, and am working with and thinking of all and only what the code that is actually there actually does. Prioritize reading code over studying the application domain.</p>
+
+  <p>Have a pleasantly odd Sunday!</p>
+</blockquote>
+
+<p>Over the years I have learned to trust the fact that <em>the code never lies</em>. In addition to possibly saying some interesting things about epistemology, this aphorism has proven trustful to me time and time again. While devs (and others) <del>argue</del> discuss what some code does, how it’s working, etc… in almost every case the wise thing to do is say very little and begin reading the code.</p>
+
+<p>There are lessons in this thread about the value of readable code as well. In the thread, there seems to be a correlation between the refactoring effort (making the code easier to understand) and the discovery of the performance problem. The easier code is to read, the easier it is to reason about, which enables developers to make improvements to it, or at very least decreases their chance of screwing it up as they change it. An explanation of the <em>value</em> of clean (read: readable) code is worthy of its own post.</p>
+
+<p>Alas! The whole thread is a great read. <a href="https://threadreaderapp.com/thread/1099733643734470656.html">Read it unrolled</a> on ThreadReader.</p>
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://software.themikejr.com/refactoring-without-domain-knowledge/';
+      this.page.identifier = 'https://software.themikejr.com/refactoring-without-domain-knowledge/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://themikejr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+<span class="pull-left">&copy; 2019, Mike Brinker. All rights reserved.</span>
+
+<span class="pull-right">ad fontes.</span>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
