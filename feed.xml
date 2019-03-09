@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2019-02-24T16:32:07-05:00</updated>
+  <updated>2019-03-09T15:31:52-05:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -24,6 +24,84 @@
     </author>
   
 
+  
+  
+    <entry>
+      
+      <title type="html">Linux, Entropy, Random Number Generation, and you</title>
+      
+      
+      <link href="https://software.themikejr.com/linux-entropy-rng/" rel="alternate" type="text/html" title="Linux, Entropy, Random Number Generation, and you" />
+      
+      <published>2019-03-09T00:00:00-05:00</published>
+      <updated>2019-03-09T00:00:00-05:00</updated>
+      <id>https://software.themikejr.com/linux-entropy-rng</id>
+      <content type="html" xml:base="https://software.themikejr.com/linux-entropy-rng/">&lt;p&gt;Recently while debugging a performance issue with a JRuby application, I learned that the JVM defaults to &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/random&lt;/code&gt; as its randomness source. This default resulted in a performance problem in the application. This post will cover the purpose of &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/random&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/urandom&lt;/code&gt; in general, the cause of the performance problem that I experienced, and the solution that I landed on.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-random-number-generation-rng-is-important-in-computing&quot;&gt;Why Random Number Generation (RNG) is important in computing&lt;/h2&gt;
+
+&lt;p&gt;In most unix-like operating systems, the files located at the path &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/random&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/urandom&lt;/code&gt; server as random number generators. True randomness is a concept that is very important in computing, especially with regards to cryptography. Cryptography often depends on a key or set of keys that are secret. If an actor was able to identify a pattern used to generate secret keys, they could likely find a way to guess what a secret key is. Inserting &lt;em&gt;randomness&lt;/em&gt; into the process of generating a secret key makes it harder for an actor to find a pattern in key generation.&lt;/p&gt;
+
+&lt;p&gt;Think for a moment about how you might write a program that would generate random values. Perhaps the program could do some math on a seed value that results in integers produced that don’t appear to follow any particular pattern. But how does one select a seed? If there is a pattern in the seed used to generate random values then you haven’t accomplished much. One might resort to using a date or timestamp and then performing math to generate a seed but in that case the seed could be guessed easily enough.&lt;/p&gt;
+
+&lt;p&gt;A source of true randomness would be quite valuable and quite difficult to construe.&lt;/p&gt;
+
+&lt;h2 id=&quot;linux-and-rng&quot;&gt;Linux and RNG&lt;/h2&gt;
+
+&lt;p&gt;To accomplish sufficiently random number generation, the linux operating system keeps an ‘entropy pool’ which is a collection of random values that one hopes to be unknown by some malevolent actor. The entropy pool then acts as a seed to a process that tries to ‘randomly’ generate numbers. This results in a stream of random output that is available at &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/random&lt;/code&gt; on the filesystem. The entropy pool is populated from a variety of sources like user input activity and other environmental noise that device drivers may observe.&lt;/p&gt;
+
+&lt;p&gt;Things get a little complicated when the entropy pool runs low.&lt;/p&gt;
+
+&lt;p&gt;When entropy runs low, &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/random&lt;/code&gt; stops or blocks. This causes any process requiring data from the random stream to wait until the entropy pool is full enough to continue generating random numbers. There is another randomness stream on most linux system at &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/urandom&lt;/code&gt; that does not block when the entropy pool runs low. Choosing not to block when the entropy pool runs low can be considered ‘less secure’ but one must think about the situations that can cause this to happen and judge accordingly whether or not &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/urandom&lt;/code&gt; is safe to use.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-jvm-and-devrandom&quot;&gt;The JVM and /dev/random&lt;/h2&gt;
+
+&lt;p&gt;By default, many versions of the JVM will default to using &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/random&lt;/code&gt;. Depending on the size of your entropy pool and your application’s need for random numbers, this can put you in a situation where you are blocked until the entropy pool reaches its required size.&lt;/p&gt;
+
+&lt;p&gt;I noticed the performance problem when I modified a JRuby application to use stronger ciphers for TLS. Presumably the strong ciphers required more random input at times and the entropy pool on my servers wasn’t always up to the task. After doing some research, (I found &lt;a href=&quot;https://www.2uo.de/myths-about-urandom/&quot;&gt;this article&lt;/a&gt; to be helpful) I decided to use &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/urandom/&lt;/code&gt; for the needs of our application.&lt;/p&gt;
+
+&lt;h2 id=&quot;addendum-useful-commands-and-config&quot;&gt;Addendum: Useful commands and config&lt;/h2&gt;
+
+&lt;p&gt;Here are a few helpful commands and settings related to entropy pools in linux and configuring the JVM accordingly. The commands assume RHEL or another system like it.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Available entropy: &lt;code class=&quot;highlighter-rouge&quot;&gt;cat /proc/sys/kernel/random/entropy_avail&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Does a CPU have a hardware RNG? &lt;code class=&quot;highlighter-rouge&quot;&gt;cat /proc/cpuinfo | grep -i rdrand | echo $?&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;JVM flag for default randomness source: &lt;code class=&quot;highlighter-rouge&quot;&gt;-Djava.security.egd=file:/dev/urandom&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Have you dealt with problems related to &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/random&lt;/code&gt;’s blocking behavior? Did I get something wrong here? Let me know in the comments.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+        <author>
+            <name>Mike Brinker</name>
+          
+          
+        </author>
+      
+
+      
+        <category term="How Things Work" />
+      
+
+      
+
+      
+        <summary type="html">Recently while debugging a performance issue with a JRuby application, I learned that the JVM defaults to /dev/random as its randomness source. This default resulted in a performance problem in the application. This post will cover the purpose of /dev/random and /dev/urandom in general, the cause of the performance problem that I experienced, and the solution that I landed on.</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>

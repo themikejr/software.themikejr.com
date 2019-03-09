@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Linux, Entropy, Random Number Generation, and you</title>
+  <meta name="description" content="Recently while debugging a performance issue with a JRuby application, I learned that the JVM defaults to /dev/random as its randomness source. This default resulted in a performance problem in the application. This post will cover the purpose of /dev/random and /dev/urandom in general, the cause of the performance problem that I experienced, and the solution that I landed on.">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://software.themikejr.com/linux-entropy-rng/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Mike Brinker on Software Development" href="https://software.themikejr.com/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="themikejr">
+  <meta name="twitter:title" content="Linux, Entropy, Random Number Generation, and you">
+  <meta name="twitter:description" content="Recently while debugging a performance issue with a JRuby application, I learned that the JVM defaults to /dev/random as its randomness source. This default resulted in a performance problem in the...">
+  
+    <meta name="twitter:creator" content="themikejr">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113905671-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113905671-2' );
+</script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <img style="float:left;padding-right:5px" src="/assets/logo.png" height="45" width=45>
+    <a class="site-title" href="/">Mike Brinker</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <a rel="author" class="p-author h-card" href="https://software.themikejr.com" style="display:none;">Mike Brinker</a>
+
+  <header class="post-header">
+    
+      <h1 class="post-title p-name" itemprop="name headline">Linux, Entropy, Random Number Generation, and you</h1>
+    
+    <p class="post-meta post-subtitle">Or &#39;How I learned to stop worrying and use /dev/urandom&#39;</p>
+    <p class="post-meta"><time class="dt-published" datetime="2019-03-09T00:00:00-05:00" itemprop="datePublished">Mar 9, 2019</time> •
+  
+    
+    
+      
+    
+      
+    
+      
+        <a href="/categories/how-things-work/">How Things Work</a>
+      
+    
+      
+    
+      
+    
+  
+
+
+
+</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Recently while debugging a performance issue with a JRuby application, I learned that the JVM defaults to <code class="highlighter-rouge">/dev/random</code> as its randomness source. This default resulted in a performance problem in the application. This post will cover the purpose of <code class="highlighter-rouge">/dev/random</code> and <code class="highlighter-rouge">/dev/urandom</code> in general, the cause of the performance problem that I experienced, and the solution that I landed on.</p>
+
+<h2 id="why-random-number-generation-rng-is-important-in-computing">Why Random Number Generation (RNG) is important in computing</h2>
+
+<p>In most unix-like operating systems, the files located at the path <code class="highlighter-rouge">/dev/random</code> and <code class="highlighter-rouge">/dev/urandom</code> server as random number generators. True randomness is a concept that is very important in computing, especially with regards to cryptography. Cryptography often depends on a key or set of keys that are secret. If an actor was able to identify a pattern used to generate secret keys, they could likely find a way to guess what a secret key is. Inserting <em>randomness</em> into the process of generating a secret key makes it harder for an actor to find a pattern in key generation.</p>
+
+<p>Think for a moment about how you might write a program that would generate random values. Perhaps the program could do some math on a seed value that results in integers produced that don’t appear to follow any particular pattern. But how does one select a seed? If there is a pattern in the seed used to generate random values then you haven’t accomplished much. One might resort to using a date or timestamp and then performing math to generate a seed but in that case the seed could be guessed easily enough.</p>
+
+<p>A source of true randomness would be quite valuable and quite difficult to construe.</p>
+
+<h2 id="linux-and-rng">Linux and RNG</h2>
+
+<p>To accomplish sufficiently random number generation, the linux operating system keeps an ‘entropy pool’ which is a collection of random values that one hopes to be unknown by some malevolent actor. The entropy pool then acts as a seed to a process that tries to ‘randomly’ generate numbers. This results in a stream of random output that is available at <code class="highlighter-rouge">/dev/random</code> on the filesystem. The entropy pool is populated from a variety of sources like user input activity and other environmental noise that device drivers may observe.</p>
+
+<p>Things get a little complicated when the entropy pool runs low.</p>
+
+<p>When entropy runs low, <code class="highlighter-rouge">/dev/random</code> stops or blocks. This causes any process requiring data from the random stream to wait until the entropy pool is full enough to continue generating random numbers. There is another randomness stream on most linux system at <code class="highlighter-rouge">/dev/urandom</code> that does not block when the entropy pool runs low. Choosing not to block when the entropy pool runs low can be considered ‘less secure’ but one must think about the situations that can cause this to happen and judge accordingly whether or not <code class="highlighter-rouge">/dev/urandom</code> is safe to use.</p>
+
+<h2 id="the-jvm-and-devrandom">The JVM and /dev/random</h2>
+
+<p>By default, many versions of the JVM will default to using <code class="highlighter-rouge">/dev/random</code>. Depending on the size of your entropy pool and your application’s need for random numbers, this can put you in a situation where you are blocked until the entropy pool reaches its required size.</p>
+
+<p>I noticed the performance problem when I modified a JRuby application to use stronger ciphers for TLS. Presumably the strong ciphers required more random input at times and the entropy pool on my servers wasn’t always up to the task. After doing some research, (I found <a href="https://www.2uo.de/myths-about-urandom/">this article</a> to be helpful) I decided to use <code class="highlighter-rouge">/dev/urandom/</code> for the needs of our application.</p>
+
+<h2 id="addendum-useful-commands-and-config">Addendum: Useful commands and config</h2>
+
+<p>Here are a few helpful commands and settings related to entropy pools in linux and configuring the JVM accordingly. The commands assume RHEL or another system like it.</p>
+
+<ul>
+  <li>Available entropy: <code class="highlighter-rouge">cat /proc/sys/kernel/random/entropy_avail</code></li>
+  <li>Does a CPU have a hardware RNG? <code class="highlighter-rouge">cat /proc/cpuinfo | grep -i rdrand | echo $?</code></li>
+  <li>JVM flag for default randomness source: <code class="highlighter-rouge">-Djava.security.egd=file:/dev/urandom</code></li>
+</ul>
+
+<hr />
+
+<p>Have you dealt with problems related to <code class="highlighter-rouge">/dev/random</code>’s blocking behavior? Did I get something wrong here? Let me know in the comments.</p>
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://software.themikejr.com/linux-entropy-rng/';
+      this.page.identifier = 'https://software.themikejr.com/linux-entropy-rng/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://themikejr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+<span class="pull-left">&copy; 2019, Mike Brinker. All rights reserved.</span>
+
+<span class="pull-right">ad fontes.</span>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
