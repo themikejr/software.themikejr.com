@@ -10,7 +10,7 @@
   
   
   <title>Linux, Entropy, Random Number Generation, and you</title>
-  <meta name="description" content="Recently while debugging a performance issue with a JRuby application, I learned that the JVM defaults to /dev/random as its randomness source. This default resulted in a performance problem in the application. This post will cover the purpose of /dev/random and /dev/urandom in general, the cause of the performance problem that I experienced, and the solution that I landed on.">
+  <meta name="description" content="Random number generation is important in cryptography. Application developers: make sure you are using a randomness source that provides the needed level of performance.">
   
 
   <link rel="stylesheet" href="/assets/main.css">
@@ -25,7 +25,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="themikejr">
   <meta name="twitter:title" content="Linux, Entropy, Random Number Generation, and you">
-  <meta name="twitter:description" content="Recently while debugging a performance issue with a JRuby application, I learned that the JVM defaults to /dev/random as its randomness source. This default resulted in a performance problem in the...">
+  <meta name="twitter:description" content="Random number generation is important in cryptography. Application developers: make sure you are using a randomness source that provides the needed level of performance.">
   
     <meta name="twitter:creator" content="themikejr">
   
