@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>An Atlas for Learning React</title>
+  <meta name="description" content="A guide to learning the concepts and ecosystem of react (a somewhat popular javascript library">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://software.themikejr.com/react-atlas/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Mike Brinker on Software Development" href="https://software.themikejr.com/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="themikejr">
+  <meta name="twitter:title" content="An Atlas for Learning React">
+  <meta name="twitter:description" content="A guide to learning the concepts and ecosystem of react (a somewhat popular javascript library">
+  
+    <meta name="twitter:creator" content="themikejr">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113905671-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113905671-2' );
+</script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <img style="float:left;padding-right:5px" src="/assets/logo.png" height="45" width=45>
+    <a class="site-title" href="/">Mike Brinker</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <a rel="author" class="p-author h-card" href="https://software.themikejr.com" style="display:none;">Mike Brinker</a>
+
+  <header class="post-header">
+    
+      <h1 class="post-title p-name" itemprop="name headline">An Atlas for Learning React</h1>
+    
+    <p class="post-meta post-subtitle">Something like a mind map, because learning something like React is complicated.</p>
+    <p class="post-meta"><time class="dt-published" datetime="2019-03-29T00:00:00-04:00" itemprop="datePublished">Mar 29, 2019</time> •
+  
+    
+    
+      
+    
+      
+    
+      
+        <a href="/categories/how-things-work/">How Things Work</a>,
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a href="/categories/react/">React</a>
+      
+    
+  
+
+
+
+</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Learning something like <a href="https://reactjs.org/">React</a> takes time. For every excellent react resource that exists on the internet, there are several poorly written tutorials showing you how to make a todo list app. This ‘atlas’ serves as a guide for myself and others. 
+It will probably be updated over time.
+Information found in the glossary of terms is largely indebted to the various resources mentioned here.</p>
+<h2 id="conceptual-overviews">Conceptual Overviews</h2>
+
+<ul>
+  <li><a href="https://reactjs.org/docs/hello-world.html">The official React guide to main concepts</a></li>
+  <li><a href="https://overreacted.io/react-as-a-ui-runtime/">React as a UI Runtime</a> (Learning react from first principles)</li>
+</ul>
+
+<h2 id="tools">Tools</h2>
+
+<ul>
+  <li><a href="https://facebook.github.io/create-react-app/">Create React App</a>, A CLI and set of sensible defaults for react projects</li>
+  <li><a href="https://github.com/facebook/react-devtools">React devtools</a>, Chrome and Firefox extension fo view react stuff along with dev tools</li>
+</ul>
+
+<h2 id="ecosystem">Ecosystem</h2>
+
+<ul>
+  <li><a href="https://nextjs.org/">Next.js</a>, Server-side rendering</li>
+  <li><a href="https://redux.js.org/">Redux</a></li>
+</ul>
+
+<h2 id="people">People</h2>
+
+<ul>
+  <li><a href="https://twitter.com/jordwalke">Jordan Walke</a>, creator of React</li>
+  <li><a href="https://overreacted.io/">Dan Abramov</a>, creator of Redux and Create React App</li>
+</ul>
+
+<h2 id="glossary-of-terms">Glossary of Terms</h2>
+
+<h3 id="elements">Elements</h3>
+<p>React <em>elements</em> are plain javascript objects that represent something that react will render in the DOM.</p>
+
+<ul>
+  <li>Treated as immutable by react</li>
+  <li>Can reference valid DOM tags or user-created components</li>
+</ul>
+
+<h3 id="components">Components</h3>
+<p>React <em>components</em> functions or instances of classes that receive props and return elements.</p>
+
+<ul>
+  <li>Can be as simple as a js function that receives an object and returns and element</li>
+  <li>Can also be a class that extends <code class="highlighter-rouge">React.component</code></li>
+  <li>Components start with an uppercase char</li>
+  <li>Must not mutate props</li>
+</ul>
+
+<h4 id="state">State</h4>
+<p><em>State</em> is essentially a property on component classes that is accessible at <code class="highlighter-rouge">this.state</code>.</p>
+
+<ul>
+  <li>Only mutate state using <code class="highlighter-rouge">setState</code></li>
+  <li><code class="highlighter-rouge">setState</code> is asynchronous</li>
+  <li><code class="highlighter-rouge">setState</code> merges properties shallowly</li>
+  <li>state is local to a given component and uses a top-down data flow</li>
+</ul>
+
+<h4 id="mounting">Mounting</h4>
+
+<ul>
+  <li><em>Mouting</em> is when an element is rendered to the DOM for the first time</li>
+  <li><em>Unmounting</em> is when an element is removed from the DOM</li>
+</ul>
+
+<h4 id="lifecycle-methods">Lifecycle Methods</h4>
+
+<ul>
+  <li><code class="highlighter-rouge">componentDidMount</code></li>
+  <li><code class="highlighter-rouge">componentWillUnmount</code></li>
+</ul>
+
+<hr />
+
+<p>Did you come across some excellent resources when learning React? Did you have a turning point where react suddenly ‘made sense’ to you? Let me know in the comments.</p>
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://software.themikejr.com/react-atlas/';
+      this.page.identifier = 'https://software.themikejr.com/react-atlas/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://themikejr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+<span class="pull-left">&copy; 2019, Mike Brinker. All rights reserved.</span>
+
+<span class="pull-right">ad fontes.</span>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
