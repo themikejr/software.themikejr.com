@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2019-03-29T15:22:43-04:00</updated>
+  <updated>2019-04-13T15:34:32-04:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -28,6 +28,103 @@
   
     <entry>
       
+      <title type="html">A Software Engineering Manifesto</title>
+      
+      
+      <link href="https://software.themikejr.com/software-engineering-manifesto-2019/" rel="alternate" type="text/html" title="A Software Engineering Manifesto" />
+      
+      <published>2019-04-13T00:00:00-04:00</published>
+      <updated>2019-04-13T00:00:00-04:00</updated>
+      <id>https://software.themikejr.com/software-engineering-manifesto-2019</id>
+      <content type="html" xml:base="https://software.themikejr.com/software-engineering-manifesto-2019/">&lt;p&gt;Disclaimer: “Best practices” are less like objective truths and more like pragmatic successes in the software engineering field. This is not to say that the correct way or even &lt;em&gt;best&lt;/em&gt; way of doing something doesn’t exist, but rather given our finiteness and the external forces of the worlds we inhabit, one should expect some variability here. While I state these in the indicative sense (“X shall be Y”) at the end of the day, the best way to write and ship software will differ from context to context and will (hopefully!) look different in coming years.&lt;/p&gt;
+
+&lt;h2 id=&quot;deployments-shall-be&quot;&gt;Deployments Shall Be&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Automated&lt;/li&gt;
+  &lt;li&gt;Scheduled&lt;/li&gt;
+  &lt;li&gt;Repeatable&lt;/li&gt;
+  &lt;li&gt;Often&lt;/li&gt;
+  &lt;li&gt;While the system is in use&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;databases-shall-be&quot;&gt;Databases Shall Be&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Migrated automatically during deployments&lt;/li&gt;
+  &lt;li&gt;Locally accessible for developers&lt;/li&gt;
+  &lt;li&gt;Optimized just in time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;code-shall-be&quot;&gt;Code Shall Be&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Version controlled&lt;/li&gt;
+  &lt;li&gt;Style-enforced at build time by automated tooling&lt;/li&gt;
+  &lt;li&gt;As simple as could possibly work&lt;/li&gt;
+  &lt;li&gt;Nearly comment free&lt;/li&gt;
+  &lt;li&gt;Deleted if unused&lt;/li&gt;
+  &lt;li&gt;Test-driven&lt;/li&gt;
+  &lt;li&gt;Treated as a liability&lt;/li&gt;
+  &lt;li&gt;Paired on as needed&lt;/li&gt;
+  &lt;li&gt;Deleted with joy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;project-management-shall-be&quot;&gt;Project Management Shall Be&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pull-based&lt;/li&gt;
+  &lt;li&gt;Optimized for end-results, not implementation details&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;developers-shall-be&quot;&gt;Developers Shall be&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Courageous to simplify the system in almost all circumstances&lt;/li&gt;
+  &lt;li&gt;Teliocentric in their efforts&lt;/li&gt;
+  &lt;li&gt;Mildly over-affectionate towards their text editors&lt;/li&gt;
+  &lt;li&gt;Allowed to work uninterrupted for generous amounts of time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;system-design-shall-be&quot;&gt;System Design Shall Be&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Evolving as necessary with every feature&lt;/li&gt;
+  &lt;li&gt;Changing as the team’s understanding of the problem domain changes&lt;/li&gt;
+  &lt;li&gt;Ultimately enforced at code review time&lt;/li&gt;
+  &lt;li&gt;Consistent whenever possible&lt;/li&gt;
+  &lt;li&gt;Delegated to widely-used open source implementations when possible&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Did I miss something? Was I completely wrong in some way? Was there something I got right? Let me know in the comments.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+        <author>
+            <name>Mike Brinker</name>
+          
+          
+        </author>
+      
+
+      
+        <category term="Practices" />
+      
+
+      
+
+      
+        <summary type="html">Disclaimer: “Best practices” are less like objective truths and more like pragmatic successes in the software engineering field. This is not to say that the correct way or even best way of doing something doesn’t exist, but rather given our finiteness and the external forces of the worlds we inhabit, one should expect some variability here. While I state these in the indicative sense (“X shall be Y”) at the end of the day, the best way to write and ship software will differ from context to context and will (hopefully!) look different in coming years.</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
       <title type="html">An Atlas for Learning React</title>
       
       
@@ -39,6 +136,7 @@
       <content type="html" xml:base="https://software.themikejr.com/react-atlas/">&lt;p&gt;Learning something like &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; takes time. For every excellent react resource that exists on the internet, there are several poorly written tutorials showing you how to make a todo list app. This ‘atlas’ serves as a guide for myself and others. 
 It will probably be updated over time.
 Information found in the glossary of terms is largely indebted to the various resources mentioned here.&lt;/p&gt;
+
 &lt;h2 id=&quot;conceptual-overviews&quot;&gt;Conceptual Overviews&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -58,6 +156,13 @@ Information found in the glossary of terms is largely indebted to the various re
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://nextjs.org/&quot;&gt;Next.js&lt;/a&gt;, Server-side rendering&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tutorials&quot;&gt;Tutorials&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://reactjs.org/tutorial/tutorial.html&quot;&gt;Official React Tutorial&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://roadtoreact.com/course-details?courseId=THE_ROAD_TO_REACT_WITH_FIREBASE&quot;&gt;The Road to React with Firebase&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;people&quot;&gt;People&lt;/h2&gt;
@@ -138,7 +243,7 @@ Information found in the glossary of terms is largely indebted to the various re
       
 
       
-        <summary type="html">Learning something like React takes time. For every excellent react resource that exists on the internet, there are several poorly written tutorials showing you how to make a todo list app. This ‘atlas’ serves as a guide for myself and others. It will probably be updated over time. Information found in the glossary of terms is largely indebted to the various resources mentioned here. Conceptual Overviews</summary>
+        <summary type="html">Learning something like React takes time. For every excellent react resource that exists on the internet, there are several poorly written tutorials showing you how to make a todo list app. This ‘atlas’ serves as a guide for myself and others. It will probably be updated over time. Information found in the glossary of terms is largely indebted to the various resources mentioned here.</summary>
       
 
       

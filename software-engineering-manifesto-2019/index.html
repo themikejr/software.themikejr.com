@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>A Software Engineering Manifesto</title>
+  <meta name="description" content="A snapshot of my best practices and preferences related to software engineering/development.">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://software.themikejr.com/software-engineering-manifesto-2019/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Mike Brinker on Software Development" href="https://software.themikejr.com/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="themikejr">
+  <meta name="twitter:title" content="A Software Engineering Manifesto">
+  <meta name="twitter:description" content="A snapshot of my best practices and preferences related to software engineering/development.">
+  
+    <meta name="twitter:creator" content="themikejr">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113905671-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113905671-2' );
+</script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <img style="float:left;padding-right:5px" src="/assets/logo.png" height="45" width=45>
+    <a class="site-title" href="/">Mike Brinker</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <a rel="author" class="p-author h-card" href="https://software.themikejr.com" style="display:none;">Mike Brinker</a>
+
+  <header class="post-header">
+    
+      <h1 class="post-title p-name" itemprop="name headline">A Software Engineering Manifesto</h1>
+    
+    <p class="post-meta post-subtitle">Not because my opinions won&#39;t evolve on these topics, but because it&#39;s good to see where one stands.</p>
+    <p class="post-meta"><time class="dt-published" datetime="2019-04-13T00:00:00-04:00" itemprop="datePublished">Apr 13, 2019</time> •
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a href="/categories/practices/">Practices</a>
+      
+    
+  
+
+
+
+</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Disclaimer: “Best practices” are less like objective truths and more like pragmatic successes in the software engineering field. This is not to say that the correct way or even <em>best</em> way of doing something doesn’t exist, but rather given our finiteness and the external forces of the worlds we inhabit, one should expect some variability here. While I state these in the indicative sense (“X shall be Y”) at the end of the day, the best way to write and ship software will differ from context to context and will (hopefully!) look different in coming years.</p>
+
+<h2 id="deployments-shall-be">Deployments Shall Be</h2>
+<ul>
+  <li>Automated</li>
+  <li>Scheduled</li>
+  <li>Repeatable</li>
+  <li>Often</li>
+  <li>While the system is in use</li>
+</ul>
+
+<h2 id="databases-shall-be">Databases Shall Be</h2>
+<ul>
+  <li>Migrated automatically during deployments</li>
+  <li>Locally accessible for developers</li>
+  <li>Optimized just in time</li>
+</ul>
+
+<h2 id="code-shall-be">Code Shall Be</h2>
+<ul>
+  <li>Version controlled</li>
+  <li>Style-enforced at build time by automated tooling</li>
+  <li>As simple as could possibly work</li>
+  <li>Nearly comment free</li>
+  <li>Deleted if unused</li>
+  <li>Test-driven</li>
+  <li>Treated as a liability</li>
+  <li>Paired on as needed</li>
+  <li>Deleted with joy</li>
+</ul>
+
+<h2 id="project-management-shall-be">Project Management Shall Be</h2>
+<ul>
+  <li>Pull-based</li>
+  <li>Optimized for end-results, not implementation details</li>
+</ul>
+
+<h2 id="developers-shall-be">Developers Shall be</h2>
+<ul>
+  <li>Courageous to simplify the system in almost all circumstances</li>
+  <li>Teliocentric in their efforts</li>
+  <li>Mildly over-affectionate towards their text editors</li>
+  <li>Allowed to work uninterrupted for generous amounts of time</li>
+</ul>
+
+<h2 id="system-design-shall-be">System Design Shall Be</h2>
+<ul>
+  <li>Evolving as necessary with every feature</li>
+  <li>Changing as the team’s understanding of the problem domain changes</li>
+  <li>Ultimately enforced at code review time</li>
+  <li>Consistent whenever possible</li>
+  <li>Delegated to widely-used open source implementations when possible</li>
+</ul>
+
+<hr />
+<p>Did I miss something? Was I completely wrong in some way? Was there something I got right? Let me know in the comments.</p>
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://software.themikejr.com/software-engineering-manifesto-2019/';
+      this.page.identifier = 'https://software.themikejr.com/software-engineering-manifesto-2019/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://themikejr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+<span class="pull-left">&copy; 2019, Mike Brinker. All rights reserved.</span>
+
+<span class="pull-right">ad fontes.</span>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
