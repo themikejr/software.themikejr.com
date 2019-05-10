@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2019-04-13T15:34:32-04:00</updated>
+  <updated>2019-05-10T16:42:58-04:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -24,6 +24,133 @@
     </author>
   
 
+  
+  
+    <entry>
+      
+      <title type="html">The Software Developer’s Path to Wisdom</title>
+      
+      
+      <link href="https://software.themikejr.com/wisdom-path/" rel="alternate" type="text/html" title="The Software Developer's Path to Wisdom" />
+      
+      <published>2019-05-09T00:00:00-04:00</published>
+      <updated>2019-05-09T00:00:00-04:00</updated>
+      <id>https://software.themikejr.com/wisdom-path</id>
+      <content type="html" xml:base="https://software.themikejr.com/wisdom-path/">&lt;p&gt;Have you ever worked with someone who was seemed able to know the right thing to do in almost all situations? This person wasn’t only very good at solving technical problems but knew how to handle people, systems, and situations too. This was a person that possesed &lt;em&gt;wisdom&lt;/em&gt;. In this blog post I will set out to define wisdom and then present the way that I think about how someone becomes wise in a given domain.&lt;/p&gt;
+
+&lt;h2 id=&quot;wisdom&quot;&gt;Wisdom?&lt;/h2&gt;
+&lt;p&gt;What is wisdom? There are many alternative defitions that you will encounter. First, let’s begin with what it isn’t:&lt;/p&gt;
+
+&lt;p&gt;What wisdom is not:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Experience&lt;/li&gt;
+  &lt;li&gt;Old age&lt;/li&gt;
+  &lt;li&gt;Intellectual prowess&lt;/li&gt;
+  &lt;li&gt;Common sense&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Any of the above factors may correlate to a wise person, but wisdom itself is something more. My definition:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Wisdom&lt;/em&gt; is the ability to understand reality and act accordingly.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Knowledge, experience, and emotional intelligence are all crucial to being able to apply wisdom, but on the whole wisdom comes across as that someone develops over time.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-model-brinkers-model-of-ideological-adoption&quot;&gt;The Model (Brinker’s Model of Ideological Adoption?)&lt;/h2&gt;
+
+&lt;p&gt;As I have thought about the acquisition of wisdom in my life and reflected on various environments in which I have sought it, I began to see a pattern. I noticed that whenever someone is presented with something new (an idea, tool, method, or system) there are stages of adoption which the person undergoes as they try that new thing out. For the sake of example, we’ll just call the thing in question “the new thing”. Here is what I’m calling the stages for now:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ignorance&lt;/li&gt;
+  &lt;li&gt;Awareness&lt;/li&gt;
+  &lt;li&gt;Zeal&lt;/li&gt;
+  &lt;li&gt;Wisdom&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;ignorance&quot;&gt;Ignorance&lt;/h3&gt;
+
+&lt;p&gt;The first stage, &lt;strong&gt;ignorance&lt;/strong&gt;, is when you are blissfully unaware of &lt;em&gt;the new thing&lt;/em&gt;. You haven’t heard of it. You may have experienced the problem that the new things solves but that’s about it.&lt;/p&gt;
+
+&lt;h3 id=&quot;awareness&quot;&gt;Awareness&lt;/h3&gt;
+
+&lt;p&gt;The second stage, &lt;strong&gt;awareness&lt;/strong&gt;, is when you become aware of &lt;em&gt;the new thing&lt;/em&gt;, but for whatever reason don’t attempt to apply it. Maybe you think it won’t be useful, or maybe you think it will be useful but that you don’t have time to try it out. Finally, you may be aware of &lt;em&gt;the new thing&lt;/em&gt; but don’t fully understand it.&lt;/p&gt;
+
+&lt;h3 id=&quot;zeal&quot;&gt;Zeal&lt;/h3&gt;
+
+&lt;p&gt;The third stage, &lt;strong&gt;zeal&lt;/strong&gt;, is a dangerous one. It could fairly be called the ‘cage stage’ because you should be locked in a cage until you are through it. In this stage you understand &lt;em&gt;the new thing&lt;/em&gt; to a degree and seek to apply it to every thing and every one, often yielding unfortunate results. You haven’t yet learned when &lt;em&gt;the new thing&lt;/em&gt; isn’t applicable, so you are an evangelist for it, blind to any situation where it isn’t useful and self-wise regarding its application. You know you are in this stage when you annoy friends/family/colleagues by blathering on and on about the glory of &lt;em&gt;the new thing&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;wisdom-1&quot;&gt;Wisdom&lt;/h3&gt;
+
+&lt;p&gt;The fourth stage, &lt;strong&gt;wisdom&lt;/strong&gt;, is the stage you want to be in. In this stage, the shininess has worn off a bit, and you are on a journey of knowing when not to use &lt;em&gt;the new thing&lt;/em&gt;. This stage asymptotically approaches perfection. You know you are getting here when you can find some aspect of &lt;em&gt;the new thing&lt;/em&gt; that you disagree with or could be a problem in some contexts. After the cage stage, this is where you become sane and tolerable regarding &lt;em&gt;the new thing&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;wisdom-in-software-development&quot;&gt;Wisdom in Software Development&lt;/h2&gt;
+
+&lt;p&gt;I have seen myself move through these stages at a macro level with regards to software development (and many other things) and also at a micro-level with certain tools, methods, and technologies. For a case study, let’s take a look at the way I adopted Test-Driven Development.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-case-study-test-driven-development&quot;&gt;A Case Study: Test-Driven Development&lt;/h2&gt;
+
+&lt;h3 id=&quot;ignorance-1&quot;&gt;Ignorance&lt;/h3&gt;
+
+&lt;p&gt;In college I had a programming class or two. No one ever mentioned TDD. I had no idea what it was. I did notice that the one programming project I had seemed to break often as I was changing it.&lt;/p&gt;
+
+&lt;h3 id=&quot;awareness-1&quot;&gt;Awareness&lt;/h3&gt;
+
+&lt;p&gt;In my first programming job I joined a team that lived and taught TDD. As soon as I began pairing with my team members I was introduced to the concept. It seemed like it might be helpful, but writing a program that tests the program which I’m writing felt very odd to think about. I always began coding a new feature and then heard one of my coworkers say “did you write a test for that?”. As I learned how to write tests and was introduced to mocks, stubs, and spies, I became proficient but still didn’t consistently write tests first.&lt;/p&gt;
+
+&lt;h3 id=&quot;zeal-1&quot;&gt;Zeal&lt;/h3&gt;
+
+&lt;p&gt;On my first software project as a full-fledged junior, I engaged in TDD with much zeal.&lt;/p&gt;
+
+&lt;p&gt;Was I about to define a class? Write a test first.  &lt;br /&gt;
+Extracting something into a private method? Write a test first.&lt;/p&gt;
+
+&lt;p&gt;Not only did I behave this way myself but I demanded that the team maintain a near 100% coverage rate.&lt;/p&gt;
+
+&lt;p&gt;The result?&lt;/p&gt;
+
+&lt;p&gt;The tests were brittle. The slightest refactor caused a lot of rework in the tests. We went to great lengths to test our getters and setters. Some teammates found me annoying.&lt;/p&gt;
+
+&lt;h3 id=&quot;wisdom-2&quot;&gt;Wisdom&lt;/h3&gt;
+
+&lt;p&gt;I eventually realized that some of my tests provided no value. Testing getters and setters didn’t buy us much. And writing a test before defining a class? That was the essence of an overzealous junior developer. I scaled back a bit and focused on writing tests that the project &lt;em&gt;needed&lt;/em&gt;. Eventually I was even able to grok the difference between London and Detroit style TDD and understand where I fit in the scheme of things. At this point people could bear to hear me talk about TDD again. I was even able to mentor and help a few people figure it out along the way. I’m not a zen master by any means, but the benefits that TDD provides as a tool are clear to me and I also understand when it isn’t that helpful. Now I remain on the long road of wisdom.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-sum&quot;&gt;In Sum&lt;/h2&gt;
+
+&lt;p&gt;Hopefully you see some concordance with reality in this model. It’s been a helpful tool for me to understand people and team dynamics in some cases.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Was this helpful in any way? Did I miss a step? Do you have a better name for this thing? Let me know in the comments.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+        <author>
+            <name>Mike Brinker</name>
+          
+          
+        </author>
+      
+
+      
+        <category term="Practices" />
+      
+
+      
+
+      
+        <summary type="html">Have you ever worked with someone who was seemed able to know the right thing to do in almost all situations? This person wasn’t only very good at solving technical problems but knew how to handle people, systems, and situations too. This was a person that possesed wisdom. In this blog post I will set out to define wisdom and then present the way that I think about how someone becomes wise in a given domain.</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
