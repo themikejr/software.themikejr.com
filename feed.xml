@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2019-05-10T16:42:58-04:00</updated>
+  <updated>2019-07-27T10:49:19-04:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -24,6 +24,68 @@
     </author>
   
 
+  
+  
+    <entry>
+      
+      <title type="html">‘Who You Are’ is ‘What You Do’</title>
+      
+      
+      <link href="https://software.themikejr.com/who-you-are-is-what-you-do/" rel="alternate" type="text/html" title="'Who You Are' is 'What You Do'" />
+      
+      <published>2019-07-27T00:00:00-04:00</published>
+      <updated>2019-07-27T00:00:00-04:00</updated>
+      <id>https://software.themikejr.com/who-you-are-is-what-you-do</id>
+      <content type="html" xml:base="https://software.themikejr.com/who-you-are-is-what-you-do/">&lt;p&gt;In the the time that I’ve spent developing software so far in my life, I’ve seen a tendency for folks to create a false dichotomy – a dualism – between accomplishing goals (“pragmatism”) and desiring to accomplish them in the theoretical ‘best way’ (“idealism”). Alas, &lt;em&gt;logic abhors a dualism&lt;/em&gt; and it’s my experience that as soon as you begin creating such a dichotomy, you’ve fallen into a trap. In fact, I’m about to tell you that &lt;em&gt;who you are&lt;/em&gt; (the way you do things and your motivation) is inextricably connected to the things you produce (goals you achieve).&lt;/p&gt;
+
+&lt;p&gt;Let’s look at this first through the lens of organizations and the products they produce. I’ve often seen that when a cultural problem exists in a company (selling things before they exist, not allowing employees to balance their work and life appropriately, favoring results above all else, etc) there is a desire to deliver and fix the cultural problems later. What many do not realize though is that the products produced by a culture are born in that context and bear the mark of their origin. In the same way that &lt;a href=&quot;https://en.wikipedia.org/wiki/Conway%27s_law&quot;&gt;Conway taught us that the shape of an organization impacts the architecture of a system&lt;/a&gt;, we can learn that an organization’s motives shape its methods, and those methods produce a product that resembles its maker.&lt;/p&gt;
+
+&lt;p&gt;Step back for a moment and consider this at the personal level. We often are driven to set goals for ourselves with the hope that once we accomplish said goal, we will have proof that we have become the person that we want to be (a marathon runner, someone with impecible hygiene, etc). James Clear, in his recent book &lt;em&gt;Atomic Habits&lt;/em&gt;, goes to great lengths to show that it is the journey towards a goal that shapes us, not the completion of a goal. One golden quote from the book is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://jamesclear.com/identity-votes&quot;&gt;Every action you take is a vote for the type of person you wish to become.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The way you do things shapes who are you, and your identity – your heart – is what drives your actions.&lt;/p&gt;
+
+&lt;p&gt;Now consider this from the software development point of view. Those who buy into the false dichotomy between ideals and results will say things like “we don’t need TDD, we need to ship software” or more perversely “Let’s wait to start using TDD until we get this first release out.” (You can exchange “TDD” in those phrases for other methods such as Continuous Delivery or Evolutionary Database Design) Those who understand that picking only ideals or results is a false choice will realize that “we can only deliver our first release and respond to change if our software can be safely modified”. In fact, favoring results over ideals is itself an ideal. There is no escaping the fact that your value system breeds a culture which births your products. Methods will always come out of ideals or vision, it’s just a matter of what ideal you choose to embrace.&lt;/p&gt;
+
+&lt;p&gt;Once an individual developer, team, or organization understands this, there is a freedom that will arise. They will realize that they can take time to think about how they do things, in fact, they must think about the &lt;em&gt;how&lt;/em&gt;. There are times when it is profitable to slow down and reason about something out of your organization vision rather than a desire to achieve a goal by a certain date.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Don’t agree? Let me know in the comments.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+        <author>
+            <name>Mike Brinker</name>
+          
+          
+        </author>
+      
+
+      
+        <category term="Practices" />
+      
+        <category term="Teams" />
+      
+
+      
+
+      
+        <summary type="html">In the the time that I’ve spent developing software so far in my life, I’ve seen a tendency for folks to create a false dichotomy – a dualism – between accomplishing goals (“pragmatism”) and desiring to accomplish them in the theoretical ‘best way’ (“idealism”). Alas, logic abhors a dualism and it’s my experience that as soon as you begin creating such a dichotomy, you’ve fallen into a trap. In fact, I’m about to tell you that who you are (the way you do things and your motivation) is inextricably connected to the things you produce (goals you achieve).</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
