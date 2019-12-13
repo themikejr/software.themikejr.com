@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <generator uri="http://jekyllrb.com" version="3.8.5">Jekyll</generator>
+  <generator uri="http://jekyllrb.com" version="3.8.6">Jekyll</generator>
   
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2019-07-27T10:49:19-04:00</updated>
+  <updated>2019-12-13T15:56:19-05:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -24,6 +24,122 @@
     </author>
   
 
+  
+  
+    <entry>
+      
+      <title type="html">Healthy Codebase Habit: Regular Dependency Updates</title>
+      
+      
+      <link href="https://software.themikejr.com/regular-dependency-updates/" rel="alternate" type="text/html" title="Healthy Codebase Habit: Regular Dependency Updates" />
+      
+      <published>2019-12-13T00:00:00-05:00</published>
+      <updated>2019-12-13T00:00:00-05:00</updated>
+      <id>https://software.themikejr.com/regular-dependency-updates</id>
+      <content type="html" xml:base="https://software.themikejr.com/regular-dependency-updates/">&lt;p&gt;Do you have a habit of updating your team’s dependencies? Congratulations, you’ve got &lt;strong&gt;fresh&lt;/strong&gt; dependencies.&lt;/p&gt;
+
+&lt;p&gt;Do you lack a habit of upgrading your projects dependencies? Oh man, you’re dependencies are probably &lt;strong&gt;stale&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ve learned that it’s better in almost every way to regularly update your dependencies. Read on for more.&lt;/p&gt;
+
+&lt;h2 id=&quot;stale-dependencies&quot;&gt;Stale Dependencies&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Stale dependencies lead to suffering.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;this-is-your-team-on-stale-dependencies&quot;&gt;This is your team on stale dependencies&lt;/h3&gt;
+
+&lt;p&gt;Everyone can guess what happens when you don’t keep your dependencies up to date on a project. Dependencies get out of date, then become harder and harder to upgrade. This is true, but there are actually deeper, darker problems to projects with stale dependencies.&lt;/p&gt;
+
+&lt;p&gt;The first couple of projects that I worked on as a software developer did not value regular dependency updates. They were java projects in a large-ish IT organization. The progression went something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;First, an approved version of a large framework was picked.&lt;/em&gt; This was usually at least the n - 1 version. From here the project began and dependencies would begin to accumulate. There was very little discussion over the fact that as time passed the project dependencies would become more and more out date, but this was the case.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Next, a developer faced a problem and wished to solve it&lt;/em&gt;. A developer faces a problem and realizes that one of the project’s dependencies could easily solve the problem. They go to upgrade a dependency to use it’s new feature and spend a few days in dependency resolution &lt;a href=&quot;https://en.wikipedia.org/wiki/Sheol&quot;&gt;sheol&lt;/a&gt; until they give up.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Then, the team accumulates an identity that is disconnected from its technology community.&lt;/em&gt; The team is stuck on old technology so why read about what is up and coming? Why contribute back to the open source community? Why spend time thinking about ways we can improve and new patterns we can adopt?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Finally, much toil is had and the cycle repeats.&lt;/em&gt;  Silly workarounds solve problems rather than new patterns available latest dependencies. One broken window turns into 50. Eventually a new project needs to be funded to bring the app into a usable state again.&lt;/p&gt;
+
+&lt;p&gt;All in all, stale dependencies cut a team off from its community and the valuable feedback loops contained therein. They incur large costs down the line and make daily life on a software development team less enjoyable.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-problems-with-stale-dependencies&quot;&gt;Some problems with stale dependencies&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Major frameworks lock you into a specific version&lt;/li&gt;
+  &lt;li&gt;Difficulties resolving dependencies that have desired features&lt;/li&gt;
+  &lt;li&gt;Team becomes a disconnected user of the dependencies they use
+    &lt;ul&gt;
+      &lt;li&gt;unable to contribute back to the community&lt;/li&gt;
+      &lt;li&gt;unable to take advantage&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Cost of modifying product becomes so high, a new project must be funded to upgrade the app once it becomes a security concern or liability&lt;/li&gt;
+  &lt;li&gt;All of these negative side effects increase cost in sundry ways&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fresh-dependencies&quot;&gt;Fresh dependencies&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Fresh dependencies breed new feedback loops&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;this-is-your-team-on-fresh-dependencies&quot;&gt;This is your team on fresh dependencies&lt;/h3&gt;
+
+&lt;p&gt;If you haven’t worked on a project that prioritized fresh dependencies, you may not be aware of the advantages that spring up. I myself was surprised.&lt;/p&gt;
+
+&lt;p&gt;After spending a while on Java projects with stale dependencies, I joined a team in Javascriptland. In Javascriptland, ‘new’ things were happening so often that the team’s evergreen app would become unworkable from an engineering point of view if they didn’t regularly keep dependencies fresh. When I first joined the team I was surprised at how much the codebase was constantly improve. I eventually identified &lt;em&gt;fresh dependencies&lt;/em&gt; as a core practice that enabled these feedback loops.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Dependency updates signal the misuse of frameworks, libraries, and APIs as breaking changes were encountered.&lt;/em&gt; Dependency maintainers regularly find ways that the APIs of their projects are miused or underused. To counter this, they make deprecations and modify the way the dependency should be consumed. Watching these changes happen makes a team aware of things maintainers are doing to improve their product. Often, seeing this happen is infectious and spurs the improvement of internal APIs or even the overall adoption of say functional programming principles over the imperative. Immutability can be contagious.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Constantly improving lint rule sets help developers improve their codebases.&lt;/em&gt;  If you work in Javascriptland you should definitely be taking advantage of establish lint rulesets like the famous &lt;a href=&quot;https://github.com/airbnb/javascript&quot;&gt;Airbnb&lt;/a&gt; repo. Upgrading these rulesets along with your dependencies will often introduce new rules that break your build. Taking time to explore why these rules were introduced and how you can follow them will lead you down new avenues of improving your codebase and programming practices. As the community learns, you learn.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Updating your language/runtime helps you to take advantage of new language features.&lt;/em&gt; Typescript is a great example of this. With typescript, if your regularly update to the latest stable version and read the blog post they produce explaining new features, you are incrementally learning about what will become part of the javascript spec in the next 12 months. Your codebase is able to take advantage of these features right away and you are using them as soon as they come out.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Proactively upgrading dependencies preemptively removes potential blockers.&lt;/em&gt; Rather than finding out you can’t use some feature that you need or that you will have to migrate a bunch of old code to maintain platform support, you will be ahead of the curve on the platforms, frameworks and libs that you use. No more worrying about running out of time to upgrade before something breaks in production.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-advantages-to-fresh-dependencies&quot;&gt;Some advantages to fresh dependencies.&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dependency updates signal the misuse of frameworks, libraries, and APIs as breaking changes were encountered&lt;/li&gt;
+  &lt;li&gt;Constantly improving lint rule sets help developers improve their codebases&lt;/li&gt;
+  &lt;li&gt;Updating your language/runtime helps you to take advantage of new language features&lt;/li&gt;
+  &lt;li&gt;Proactively upgrading dependencies preemptively removes potential blockers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;in-sum&quot;&gt;In Sum&lt;/h2&gt;
+
+&lt;p&gt;Keep your team, project, and personal development healthy by updating your codebase’s dependencies at a regular interval. Like our health or our relationships, doing good things often yields unpredictable benefits, while neglecting them will create emergency situations and make you feel like a lame human being.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Please share in the comments: advantages you have seen from keeping dependencies up to date, or stale dependency horror stories you’ve lived through.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+        <author>
+            <name>Mike Brinker</name>
+          
+          
+        </author>
+      
+
+      
+        <category term="Practices" />
+      
+
+      
+
+      
+        <summary type="html">Do you have a habit of updating your team’s dependencies? Congratulations, you’ve got fresh dependencies.</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>

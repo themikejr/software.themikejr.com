@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Healthy Codebase Habit: Regular Dependency Updates</title>
+  <meta name="description" content="Keep your team, project, and personal development healthy by updating your codebase&#39;s dependencies at a regular interval.">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://software.themikejr.com/regular-dependency-updates/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Mike Brinker on Software Development" href="https://software.themikejr.com/feed.xml">
+
+  
+
+  
+  <meta property="og:title" content="Healthy Codebase Habit: Regular Dependency Updates">
+  <meta property="og:site_name" content="Mike Brinker on Software Development">
+  <meta property="og:url" content="https://software.themikejr.com/regular-dependency-updates/">
+  <meta property="og:description" content="Keep your team, project, and personal development healthy by updating your codebase&#39;s dependencies at a regular interval.">
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="themikejr">
+  <meta name="twitter:title" content="Healthy Codebase Habit: Regular Dependency Updates">
+  <meta name="twitter:description" content="Keep your team, project, and personal development healthy by updating your codebase&#39;s dependencies at a regular interval.">
+  
+    <meta name="twitter:creator" content="themikejr">
+  
+  
+
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700&display=swap" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113905671-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113905671-2' );
+</script>
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <img style="float:left;padding-right:5px" src="/assets/logo.png" height="45" width=45>
+    <a class="site-title" href="/">Mike Brinker</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <a rel="author" class="p-author h-card" href="https://software.themikejr.com" style="display:none;">Mike Brinker</a>
+
+  <header class="post-header">
+    
+      <h1 class="post-title p-name" itemprop="name headline">Healthy Codebase Habit: Regular Dependency Updates</h1>
+    
+    <p class="post-meta post-subtitle"></p>
+    <p class="post-meta"><time class="dt-published" datetime="2019-12-13T00:00:00-05:00" itemprop="datePublished">Dec 13, 2019</time> •
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <a href="/categories/practices/">Practices</a>
+      
+    
+  
+
+
+
+</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Do you have a habit of updating your team’s dependencies? Congratulations, you’ve got <strong>fresh</strong> dependencies.</p>
+
+<p>Do you lack a habit of upgrading your projects dependencies? Oh man, you’re dependencies are probably <strong>stale</strong>.</p>
+
+<p>I’ve learned that it’s better in almost every way to regularly update your dependencies. Read on for more.</p>
+
+<h2 id="stale-dependencies">Stale Dependencies</h2>
+
+<p><em>Stale dependencies lead to suffering.</em></p>
+
+<h3 id="this-is-your-team-on-stale-dependencies">This is your team on stale dependencies</h3>
+
+<p>Everyone can guess what happens when you don’t keep your dependencies up to date on a project. Dependencies get out of date, then become harder and harder to upgrade. This is true, but there are actually deeper, darker problems to projects with stale dependencies.</p>
+
+<p>The first couple of projects that I worked on as a software developer did not value regular dependency updates. They were java projects in a large-ish IT organization. The progression went something like this:</p>
+
+<p><em>First, an approved version of a large framework was picked.</em> This was usually at least the n - 1 version. From here the project began and dependencies would begin to accumulate. There was very little discussion over the fact that as time passed the project dependencies would become more and more out date, but this was the case.</p>
+
+<p><em>Next, a developer faced a problem and wished to solve it</em>. A developer faces a problem and realizes that one of the project’s dependencies could easily solve the problem. They go to upgrade a dependency to use it’s new feature and spend a few days in dependency resolution <a href="https://en.wikipedia.org/wiki/Sheol">sheol</a> until they give up.</p>
+
+<p><em>Then, the team accumulates an identity that is disconnected from its technology community.</em> The team is stuck on old technology so why read about what is up and coming? Why contribute back to the open source community? Why spend time thinking about ways we can improve and new patterns we can adopt?</p>
+
+<p><em>Finally, much toil is had and the cycle repeats.</em>  Silly workarounds solve problems rather than new patterns available latest dependencies. One broken window turns into 50. Eventually a new project needs to be funded to bring the app into a usable state again.</p>
+
+<p>All in all, stale dependencies cut a team off from its community and the valuable feedback loops contained therein. They incur large costs down the line and make daily life on a software development team less enjoyable.</p>
+
+<h3 id="some-problems-with-stale-dependencies">Some problems with stale dependencies</h3>
+
+<ul>
+  <li>Major frameworks lock you into a specific version</li>
+  <li>Difficulties resolving dependencies that have desired features</li>
+  <li>Team becomes a disconnected user of the dependencies they use
+    <ul>
+      <li>unable to contribute back to the community</li>
+      <li>unable to take advantage</li>
+    </ul>
+  </li>
+  <li>Cost of modifying product becomes so high, a new project must be funded to upgrade the app once it becomes a security concern or liability</li>
+  <li>All of these negative side effects increase cost in sundry ways</li>
+</ul>
+
+<h2 id="fresh-dependencies">Fresh dependencies</h2>
+
+<p><em>Fresh dependencies breed new feedback loops</em>.</p>
+
+<h3 id="this-is-your-team-on-fresh-dependencies">This is your team on fresh dependencies</h3>
+
+<p>If you haven’t worked on a project that prioritized fresh dependencies, you may not be aware of the advantages that spring up. I myself was surprised.</p>
+
+<p>After spending a while on Java projects with stale dependencies, I joined a team in Javascriptland. In Javascriptland, ‘new’ things were happening so often that the team’s evergreen app would become unworkable from an engineering point of view if they didn’t regularly keep dependencies fresh. When I first joined the team I was surprised at how much the codebase was constantly improve. I eventually identified <em>fresh dependencies</em> as a core practice that enabled these feedback loops.</p>
+
+<p><em>Dependency updates signal the misuse of frameworks, libraries, and APIs as breaking changes were encountered.</em> Dependency maintainers regularly find ways that the APIs of their projects are miused or underused. To counter this, they make deprecations and modify the way the dependency should be consumed. Watching these changes happen makes a team aware of things maintainers are doing to improve their product. Often, seeing this happen is infectious and spurs the improvement of internal APIs or even the overall adoption of say functional programming principles over the imperative. Immutability can be contagious.</p>
+
+<p><em>Constantly improving lint rule sets help developers improve their codebases.</em>  If you work in Javascriptland you should definitely be taking advantage of establish lint rulesets like the famous <a href="https://github.com/airbnb/javascript">Airbnb</a> repo. Upgrading these rulesets along with your dependencies will often introduce new rules that break your build. Taking time to explore why these rules were introduced and how you can follow them will lead you down new avenues of improving your codebase and programming practices. As the community learns, you learn.</p>
+
+<p><em>Updating your language/runtime helps you to take advantage of new language features.</em> Typescript is a great example of this. With typescript, if your regularly update to the latest stable version and read the blog post they produce explaining new features, you are incrementally learning about what will become part of the javascript spec in the next 12 months. Your codebase is able to take advantage of these features right away and you are using them as soon as they come out.</p>
+
+<p><em>Proactively upgrading dependencies preemptively removes potential blockers.</em> Rather than finding out you can’t use some feature that you need or that you will have to migrate a bunch of old code to maintain platform support, you will be ahead of the curve on the platforms, frameworks and libs that you use. No more worrying about running out of time to upgrade before something breaks in production.</p>
+
+<h3 id="some-advantages-to-fresh-dependencies">Some advantages to fresh dependencies.</h3>
+
+<ul>
+  <li>Dependency updates signal the misuse of frameworks, libraries, and APIs as breaking changes were encountered</li>
+  <li>Constantly improving lint rule sets help developers improve their codebases</li>
+  <li>Updating your language/runtime helps you to take advantage of new language features</li>
+  <li>Proactively upgrading dependencies preemptively removes potential blockers</li>
+</ul>
+
+<h2 id="in-sum">In Sum</h2>
+
+<p>Keep your team, project, and personal development healthy by updating your codebase’s dependencies at a regular interval. Like our health or our relationships, doing good things often yields unpredictable benefits, while neglecting them will create emergency situations and make you feel like a lame human being.</p>
+
+<hr />
+
+<p>Please share in the comments: advantages you have seen from keeping dependencies up to date, or stale dependency horror stories you’ve lived through.</p>
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://software.themikejr.com/regular-dependency-updates/';
+      this.page.identifier = 'https://software.themikejr.com/regular-dependency-updates/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://themikejr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+<span class="pull-left">&copy; 2019, Mike Brinker. All rights reserved.</span>
+
+<span class="pull-right">ad fontes.</span>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
