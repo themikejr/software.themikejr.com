@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2020-01-30T14:45:19-05:00</updated>
+  <updated>2020-01-30T14:52:34-05:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -84,7 +84,7 @@
 
 &lt;p&gt;In light of this, software teams must focus on keeping their products’ cost of change consistently low.&lt;/p&gt;
 
-&lt;p&gt;There is an ever growing pool of tools and methods to achieve this. Test-driven development, automated checks, automatic code styling, lint rules, CI jobs, and code review processes are among some of the most prominent.&lt;/p&gt;
+&lt;p&gt;There is an ever growing pool of tools and methods to achieve this. Test-driven development, automated checks, automatic code styling, lint rules, CI jobs, &lt;a href=&quot;/regular-dependency-updates/&quot;&gt;keeping your dependencies up to date&lt;/a&gt;, and code review processes are among some of the most prominent.&lt;/p&gt;
 
 &lt;p&gt;If a software team fails to keep the cost of change low (“not enough time!”, “I can do that later”, “We don’t really need that yet”) they are really just biding their time until the next expensive rewrite.&lt;/p&gt;
 
