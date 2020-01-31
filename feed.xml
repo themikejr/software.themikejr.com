@@ -5,7 +5,7 @@
   
   <link href="https://software.themikejr.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://software.themikejr.com/" rel="alternate" type="text/html" />
-  <updated>2020-01-30T14:52:34-05:00</updated>
+  <updated>2020-01-31T10:03:26-05:00</updated>
   <id>https://software.themikejr.com//</id>
 
   
@@ -62,7 +62,7 @@
 
 &lt;p&gt;Software itself is highly malleable which allows its output to likewise be very pliable.&lt;/p&gt;
 
-&lt;p&gt;There are many angles to this (sociological, economic, cultural, etc…) but it seems to me that a key factor is how easy it can be to change software and thus modify its output. Costs associated with changing software (including time) different from other media by orders of magnitude.&lt;/p&gt;
+&lt;p&gt;There are many angles to this (sociological, economic, cultural, etc…) but it seems to me that a key factor is how easy it can be to change software and thus modify its output. Costs associated with changing software (including time) differ from other media by orders of magnitude.&lt;/p&gt;
 
 &lt;h2 id=&quot;softwares-ability-to-change-is-a-primary-competitive-advantage&quot;&gt;Software’s ability to change is a primary competitive advantage&lt;/h2&gt;
 
@@ -74,13 +74,15 @@
 
 &lt;p&gt;Publishing is another industry revolutionized by software. Just think about the difference between publishing updates to an ebook compared to printing the second edition of a physical book.&lt;/p&gt;
 
+&lt;p&gt;It is economically “better” to employ software for a given task precisely because it can be so easy to modify and update.&lt;/p&gt;
+
 &lt;h2 id=&quot;therefore-consistently-low-cost-of-change-is-essential-to-maximizing-its-intrinsic-benefits&quot;&gt;Therefore, consistently low cost of change is essential to maximizing its intrinsic benefits&lt;/h2&gt;
 
 &lt;p&gt;So, how is this discussion relevant to an individual software developer or a software team?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;To achieve these economic advantages, software must &lt;em&gt;remain&lt;/em&gt; inexpensive to change.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;We all know that possible the most common problem to crop up in software teams is that as a codebase or system ages and gains more functionality, it can become very difficult to change. This can be magnified by having a multiplicity of contributors spanning cultures and continents. As functions get longer, if statements are added, comments become stale, and files get huge, a system loses the economic benefits that made it profitable in the first place.&lt;/p&gt;
+&lt;p&gt;We all know that possibly the most common problem to crop up in software teams is that as a codebase or system ages and gains more functionality it becomes very difficult to change. If code isn’t clean and readable and if relevant tasks aren’t documented and automated, making small changes to the system can take inordinate amounts of time and effort. This can be magnified by having a multiplicity of contributors who may come and go, each knowing a part of the system better than the whole. As functions get longer, if statements are added, comments become stale, and files get huge, a system loses the economic benefits that made it profitable in the first place.&lt;/p&gt;
 
 &lt;p&gt;In light of this, software teams must focus on keeping their products’ cost of change consistently low.&lt;/p&gt;
 
